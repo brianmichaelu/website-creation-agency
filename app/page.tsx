@@ -308,32 +308,67 @@ ${formData.get("extraMessage")}
               </h2>
             </div>
             <p className="max-w-xl text-slate-600">
-              Replace these placeholders with real screenshots as your website
-              projects grow.
-            </p>
+  A growing showcase of business website designs created for local brands,
+  service providers, hotels, and companies that need a stronger online presence.
+</p>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {[
-              "Lub Run Enterprises",
-              "Local Hotel Website",
-              "Business Landing Page",
-              "Coming Soon Project",
-            ].map((project) => (
-              <div
-                key={project}
-                className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50"
-              >
-                <div className="h-56 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-500" />
-                <div className="p-7">
-                  <h3 className="text-2xl font-black">{project}</h3>
-                  <p className="mt-3 text-slate-600">
-                    Website project preview. Add project details, screenshots
-                    and client results here.
-                  </p>
-                </div>
-              </div>
-            ))}
+  {
+    name: "Lub Run Enterprises",
+    type: "Printing & Branding Website",
+    description:
+      "A professional business website designed to present printing services, branded products, company information, and direct client enquiries.",
+    tag: "Live Business Site",
+  },
+  {
+    name: "Local Hotel Website",
+    type: "Hotel & Accommodation Website",
+    description:
+      "A clean hotel website concept built to showcase rooms, amenities, location, booking enquiries, and a trusted local hospitality image.",
+    tag: "Hospitality Design",
+  },
+  {
+    name: "Business Landing Page",
+    type: "Service Business Website",
+    description:
+      "A focused landing page structure made for small businesses that want to explain their offer quickly and turn visitors into leads.",
+    tag: "Lead Generation",
+  },
+  {
+    name: "Website Creation Agency",
+    type: "Web Design Portfolio",
+    description:
+      "A modern agency website built to showcase services, packages, process, portfolio work, and client onboarding through WhatsApp.",
+    tag: "Current Project",
+  },
+].map((project) => (
+  <div
+    key={project.name}
+    className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 transition hover:-translate-y-1 hover:shadow-2xl"
+  >
+    <div className="relative h-56 overflow-hidden bg-gradient-to-br from-slate-950 via-blue-900 to-cyan-500">
+      <div className="absolute left-6 top-6 rounded-full bg-white/90 px-4 py-2 text-sm font-bold text-[#06111f]">
+        {project.tag}
+      </div>
+
+      <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/15 p-5 backdrop-blur-md">
+        <div className="mb-4 h-3 w-24 rounded-full bg-white/70" />
+        <div className="mb-3 h-3 w-full rounded-full bg-white/50" />
+        <div className="h-3 w-2/3 rounded-full bg-white/40" />
+      </div>
+    </div>
+
+    <div className="p-7">
+      <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
+        {project.type}
+      </p>
+      <h3 className="mt-3 text-2xl font-black">{project.name}</h3>
+      <p className="mt-3 leading-7 text-slate-600">{project.description}</p>
+    </div>
+  </div>
+))}
           </div>
         </div>
       </section>
