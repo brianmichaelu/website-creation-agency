@@ -39,28 +39,31 @@ ${formData.get("extraMessage")}
       {/* NAVBAR */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#06111f]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div>
-            <p className="text-xl font-black tracking-tight">WebCraft TZ</p>
-            <p className="text-xs text-blue-200">Website Creation Studio</p>
-          </div>
+          <a href="#" className="block">
+  <p className="text-xl font-black tracking-tight">WebCraft TZ</p>
+  <p className="text-xs text-blue-200">Website Creation Studio</p>
+</a>
 
           <nav className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
-            <a href="#services" className="hover:text-white">
-              Services
-            </a>
-            <a href="#packages" className="hover:text-white">
-              Packages
-            </a>
-            <a href="#process" className="hover:text-white">
-              Process
-            </a>
-            <a href="#portfolio" className="hover:text-white">
-              Portfolio
-            </a>
-            <a href="#client-form" className="hover:text-white">
-              Client Form
-            </a>
-          </nav>
+  <a href="#" className="hover:text-white">
+    Home
+  </a>
+  <a href="#services" className="hover:text-white">
+    Services
+  </a>
+  <a href="#packages" className="hover:text-white">
+    Packages
+  </a>
+  <a href="#process" className="hover:text-white">
+    Process
+  </a>
+  <a href="#portfolio" className="hover:text-white">
+    Portfolio
+  </a>
+  <a href="#client-form" className="hover:text-white">
+    Client Form
+  </a>
+</nav>
 
           <a
             href={`https://wa.me/${whatsappNumber}`}
