@@ -1,5 +1,38 @@
+"use client";
 export default function Home() {
   const whatsappNumber = "255689824682";
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+
+  const formData = new FormData(event.currentTarget);
+
+  const message = `
+Hello, I want a website. Here are my business details:
+
+Client Name: ${formData.get("clientName")}
+Business Name: ${formData.get("businessName")}
+Phone Number: ${formData.get("phone")}
+Email: ${formData.get("email")}
+Type of Business: ${formData.get("businessType")}
+Pages Needed: ${formData.get("pagesNeeded")}
+Preferred Website Style: ${formData.get("websiteStyle")}
+Deadline: ${formData.get("deadline")}
+Do you have a logo?: ${formData.get("hasLogo")}
+Do you have photos?: ${formData.get("hasPhotos")}
+
+Services/Products Offered:
+${formData.get("services")}
+
+Competitor/Example Websites:
+${formData.get("examples")}
+
+Extra Message:
+${formData.get("extraMessage")}
+`;
+
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+};
 
   return (
     <main className="min-h-screen bg-[#06111f] text-white">
@@ -319,100 +352,175 @@ export default function Home() {
           </div>
 
           <form
-            action={`https://wa.me/${whatsappNumber}`}
-            method="get"
-            className="rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur-xl"
-          >
-            <div className="grid gap-4 md:grid-cols-2">
-              <input
-                name="text"
-                type="hidden"
-                value="Hello, I want a website. Please review my business details."
-              />
+  onSubmit={handleSubmit}
+  className="rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur-xl"
+>
+  <div className="grid gap-4 md:grid-cols-2">
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Client name
+      </span>
+      <input
+        name="clientName"
+        required
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+        placeholder="Client name"
+      />
+    </label>
 
-              {[
-                "Client name",
-                "Business name",
-                "Phone number",
-                "Email",
-                "Type of business",
-                "Pages needed",
-                "Preferred website style",
-                "Deadline",
-              ].map((label) => (
-                <label key={label} className="block">
-                  <span className="mb-2 block text-sm font-semibold text-slate-200">
-                    {label}
-                  </span>
-                  <input
-                    className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
-                    placeholder={label}
-                  />
-                </label>
-              ))}
-            </div>
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Business name
+      </span>
+      <input
+        name="businessName"
+        required
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+        placeholder="Business name"
+      />
+    </label>
 
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              <label className="block">
-                <span className="mb-2 block text-sm font-semibold text-slate-200">
-                  Do you already have a logo?
-                </span>
-                <select className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400">
-                  <option>Yes</option>
-                  <option>No</option>
-                  <option>I need one created</option>
-                </select>
-              </label>
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Phone number
+      </span>
+      <input
+        name="phone"
+        type="tel"
+        required
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+        placeholder="+255..."
+      />
+    </label>
 
-              <label className="block">
-                <span className="mb-2 block text-sm font-semibold text-slate-200">
-                  Do you already have photos?
-                </span>
-                <select className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400">
-                  <option>Yes</option>
-                  <option>No</option>
-                  <option>Some, but not enough</option>
-                </select>
-              </label>
-            </div>
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Email
+      </span>
+      <input
+        name="email"
+        type="email"
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+        placeholder="example@email.com"
+      />
+    </label>
 
-            <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-semibold text-slate-200">
-                Services/products offered
-              </span>
-              <textarea
-                className="h-28 w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
-                placeholder="List your main services or products"
-              />
-            </label>
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Type of business
+      </span>
+      <input
+        name="businessType"
+        required
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+        placeholder="Hotel, restaurant, printing company..."
+      />
+    </label>
 
-            <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-semibold text-slate-200">
-                Competitor/example websites
-              </span>
-              <textarea
-                className="h-24 w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
-                placeholder="Paste links or describe the style you like"
-              />
-            </label>
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Pages needed
+      </span>
+      <input
+        name="pagesNeeded"
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+        placeholder="Home, About, Services, Contact..."
+      />
+    </label>
 
-            <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-semibold text-slate-200">
-                Extra message
-              </span>
-              <textarea
-                className="h-28 w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
-                placeholder="Anything else I should know?"
-              />
-            </label>
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Preferred website style
+      </span>
+      <input
+        name="websiteStyle"
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+        placeholder="Modern, luxury, simple, corporate..."
+      />
+    </label>
 
-            <button
-              type="submit"
-              className="mt-6 w-full rounded-2xl bg-blue-500 px-6 py-4 text-lg font-black text-white hover:bg-blue-400"
-            >
-              Submit to WhatsApp
-            </button>
-          </form>
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Deadline
+      </span>
+      <input
+        name="deadline"
+        type="date"
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+      />
+    </label>
+  </div>
+
+  <div className="mt-4 grid gap-4 md:grid-cols-2">
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Do you already have a logo?
+      </span>
+      <select
+        name="hasLogo"
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+      >
+        <option>Yes</option>
+        <option>No</option>
+        <option>I need one created</option>
+      </select>
+    </label>
+
+    <label className="block">
+      <span className="mb-2 block text-sm font-semibold text-slate-200">
+        Do you already have photos?
+      </span>
+      <select
+        name="hasPhotos"
+        className="w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+      >
+        <option>Yes</option>
+        <option>No</option>
+        <option>Some, but not enough</option>
+      </select>
+    </label>
+  </div>
+
+  <label className="mt-4 block">
+    <span className="mb-2 block text-sm font-semibold text-slate-200">
+      Services/products offered
+    </span>
+    <textarea
+      name="services"
+      className="h-28 w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+      placeholder="List your main services or products"
+    />
+  </label>
+
+  <label className="mt-4 block">
+    <span className="mb-2 block text-sm font-semibold text-slate-200">
+      Competitor/example websites
+    </span>
+    <textarea
+      name="examples"
+      className="h-24 w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+      placeholder="Paste links or describe the style you like"
+    />
+  </label>
+
+  <label className="mt-4 block">
+    <span className="mb-2 block text-sm font-semibold text-slate-200">
+      Extra message
+    </span>
+    <textarea
+      name="extraMessage"
+      className="h-28 w-full rounded-2xl border border-white/10 bg-white px-4 py-3 text-[#06111f] outline-none focus:border-blue-400"
+      placeholder="Anything else I should know?"
+    />
+  </label>
+
+  <button
+    type="submit"
+    className="mt-6 w-full rounded-2xl bg-blue-500 px-6 py-4 text-lg font-black text-white hover:bg-blue-400"
+  >
+    Submit to WhatsApp
+  </button>
+</form>
         </div>
       </section>
 
