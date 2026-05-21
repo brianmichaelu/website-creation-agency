@@ -32,6 +32,8 @@ ${formData.get("extraMessage")}
 
   const encodedMessage = encodeURIComponent(message);
   window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+
+event.currentTarget.reset();
 };
 
   return (
