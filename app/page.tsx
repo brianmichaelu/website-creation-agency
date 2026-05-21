@@ -555,11 +555,11 @@ event.currentTarget.reset();
   </label>
 
   <button
-    type="submit"
-    className="mt-6 w-full rounded-2xl bg-blue-500 px-6 py-4 text-lg font-black text-white hover:bg-blue-400"
-  >
-    Submit to WhatsApp
-  </button>
+  type="submit"
+  className="mt-6 w-full cursor-pointer rounded-2xl bg-blue-500 px-6 py-4 text-lg font-black text-white transition hover:bg-blue-400"
+>
+  Submit to WhatsApp
+</button>
 </form>
         </div>
       </section>
