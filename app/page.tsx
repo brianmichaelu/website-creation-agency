@@ -40,171 +40,171 @@ ${formData.get("extraMessage")}
   };
 
   return (
-        <main className="min-h-screen bg-[#f7efe3] text-[#1d1a16]">
+            <main className="min-h-screen bg-[#f7efe3] text-[#1d1a16]">
       {/* NAVBAR */}
-      <header className="sticky top-0 z-50 border-b border-[#1d1a16]/10 bg-[#fffaf0]/95 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#" className="block">
-            <p className="text-xl font-black tracking-tight text-[#1d1a16]">
-              WebCraft TZ
-            </p>
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-[#b45309]">
-              Website Creation Studio
-            </p>
-          </a>
+      <header className="sticky top-0 z-50 bg-[#fffaf0] shadow-lg shadow-[#1d1a16]/10">
+        <div className="border-b border-[#1d1a16]/10 bg-[#1d1a16] px-6 py-5 text-[#fffaf0]">
+          <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 md:flex-row md:items-center">
+            <a href="#" className="block">
+              <p className="text-2xl font-black tracking-tight">
+                WebCraft <span className="text-[#f7d58b]">TZ</span>
+              </p>
+              <p className="text-xs font-black uppercase tracking-[0.3em] text-[#f7d58b]">
+                Website Creation Studio
+              </p>
+            </a>
 
-          <nav className="hidden items-center gap-8 text-sm font-bold text-[#5f5549] md:flex">
-            <a href="#" className="transition hover:text-[#b45309]">
-              Home
-            </a>
-            <a href="#services" className="transition hover:text-[#b45309]">
-              Services
-            </a>
-            <a href="#packages" className="transition hover:text-[#b45309]">
-              Packages
-            </a>
-            <a href="#process" className="transition hover:text-[#b45309]">
-              Process
-            </a>
-            <a href="#portfolio" className="transition hover:text-[#b45309]">
-              Portfolio
-            </a>
-            <a href="#client-form" className="transition hover:text-[#b45309]">
-              Client Form
-            </a>
-          </nav>
+            <div className="grid gap-4 text-sm text-[#d8cabc] md:grid-cols-3 md:items-center">
+              <div>
+                <p className="font-black text-[#fffaf0]">Location</p>
+                <p>Dar es Salaam, Tanzania</p>
+              </div>
 
-          <a
-            href={`https://wa.me/${whatsappNumber}`}
-            className="rounded-full bg-[#1d1a16] px-5 py-2.5 text-sm font-black text-[#fffaf0] shadow-lg shadow-[#1d1a16]/20 transition hover:-translate-y-0.5 hover:bg-[#b45309]"
-          >
-            WhatsApp
-          </a>
+              <div>
+                <p className="font-black text-[#fffaf0]">Email</p>
+                <p>lubrun.enterprises@gmail.com</p>
+              </div>
+
+              <a
+                href={`https://wa.me/${whatsappNumber}`}
+                className="rounded-md bg-[#b45309] px-5 py-3 text-center font-black text-white transition hover:bg-[#92400e]"
+              >
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-b border-[#1d1a16]/10 bg-[#fffaf0] px-6">
+          <div className="mx-auto flex max-w-7xl items-center justify-between">
+            <nav className="flex overflow-x-auto text-sm font-black uppercase text-[#5f5549]">
+              <a href="#" className="border-r border-[#1d1a16]/10 px-5 py-5 transition hover:text-[#b45309]">
+                Home
+              </a>
+              <a href="#services" className="border-r border-[#1d1a16]/10 px-5 py-5 transition hover:text-[#b45309]">
+                Services
+              </a>
+              <a href="#packages" className="border-r border-[#1d1a16]/10 px-5 py-5 transition hover:text-[#b45309]">
+                Packages
+              </a>
+              <a href="#process" className="border-r border-[#1d1a16]/10 px-5 py-5 transition hover:text-[#b45309]">
+                Process
+              </a>
+              <a href="#portfolio" className="border-r border-[#1d1a16]/10 px-5 py-5 transition hover:text-[#b45309]">
+                Portfolio
+              </a>
+              <a href="#client-form" className="px-5 py-5 transition hover:text-[#b45309]">
+                Client Form
+              </a>
+            </nav>
+
+            <a
+              href="#client-form"
+              className="hidden bg-[#1d1a16] px-6 py-5 text-sm font-black uppercase text-[#fffaf0] transition hover:bg-[#b45309] md:block"
+            >
+              Request Website
+            </a>
+          </div>
         </div>
       </header>
 
       {/* HERO */}
-            {/* HERO */}
       <section className="editorial-grid relative overflow-hidden px-6 py-16 md:py-20">
-        <div className="absolute -right-32 top-8 h-[420px] w-[420px] rounded-full bg-[#d97706]/20 blur-3xl" />
+        <div className="absolute -right-28 top-10 h-[420px] w-[420px] rounded-full bg-[#d97706]/20 blur-3xl" />
         <div className="absolute -left-28 bottom-0 h-[360px] w-[360px] rounded-full bg-[#1b5e3f]/10 blur-3xl" />
 
-        <div className="relative mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
-            <div>
-              <div className="mb-6 inline-flex rounded-full border border-[#b45309]/30 bg-[#fffaf0]/85 px-4 py-2 text-sm font-black text-[#9a3412] shadow-sm">
-                Professional websites for serious businesses
-              </div>
-
-              <h1 className="max-w-5xl text-5xl font-black leading-[0.9] tracking-tight text-[#1d1a16] md:text-7xl lg:text-8xl">
-                Websites that make local brands look bigger, sharper and ready
-                for clients.
-              </h1>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <div className="mb-8 flex items-center gap-4">
+              <span className="h-[2px] w-16 bg-[#b45309]" />
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
+                Key part of your marketing
+              </p>
             </div>
 
-            <div className="lg:pt-24">
-              <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0]/90 p-6 shadow-xl shadow-[#1d1a16]/10 backdrop-blur">
-                <p className="text-lg leading-8 text-[#5f5549]">
-                  I create clean, mobile-friendly business websites for hotels,
-                  service providers, printing companies, shops, real estate
-                  agents, clinics, restaurants and growing brands in Tanzania.
-                </p>
+            <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-[#1d1a16] md:text-7xl">
+              Website
+              <span className="block text-[#b45309]">Design</span>
+            </h1>
 
-                <div className="mt-7 flex flex-col gap-4">
-                  <a
-                    href="#client-form"
-                    className="rounded-full bg-[#1d1a16] px-8 py-4 text-center font-black text-[#fffaf0] shadow-xl shadow-[#1d1a16]/20 transition hover:-translate-y-1 hover:bg-[#b45309]"
-                  >
-                    Start Your Website
-                  </a>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#5f5549]">
+              I create clean, mobile-friendly business websites for hotels,
+              service providers, printing companies, shops, real estate agents,
+              clinics, restaurants and growing brands in Tanzania.
+            </p>
 
-                  <a
-                    href="#portfolio"
-                    className="rounded-full border border-[#1d1a16]/20 bg-white px-8 py-4 text-center font-black text-[#1d1a16] transition hover:-translate-y-1 hover:border-[#b45309] hover:text-[#b45309]"
-                  >
-                    View Work
-                  </a>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#client-form"
+                className="rounded-md bg-[#1d1a16] px-8 py-4 text-center font-black text-[#fffaf0] shadow-xl shadow-[#1d1a16]/20 transition hover:-translate-y-1 hover:bg-[#b45309]"
+              >
+                Start Your Website
+              </a>
+
+              <a
+                href="#portfolio"
+                className="rounded-md border-2 border-[#1d1a16]/20 bg-[#fffaf0]/80 px-8 py-4 text-center font-black text-[#1d1a16] transition hover:-translate-y-1 hover:border-[#b45309] hover:text-[#b45309]"
+              >
+                View Work
+              </a>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -left-5 top-16 hidden h-16 w-16 rotate-12 rounded-2xl bg-[#fffaf0] p-4 shadow-2xl md:block">
+              <div className="h-full w-full rounded-xl bg-[#b45309]" />
+            </div>
+
+            <div className="absolute -right-4 bottom-12 hidden h-20 w-20 -rotate-12 rounded-2xl bg-[#1d1a16] p-4 shadow-2xl md:block">
+              <div className="h-full w-full rounded-xl bg-white/20" />
+            </div>
+
+            <div className="rounded-[2rem] bg-[#1d1a16] p-5 shadow-2xl shadow-[#1d1a16]/25">
+              <div className="rounded-[1.5rem] bg-[#fffaf0] p-5 text-[#1d1a16]">
+                <div className="mb-5 flex items-center justify-between border-b border-[#1d1a16]/10 pb-4">
+                  <div>
+                    <p className="text-sm font-black uppercase tracking-[0.2em] text-[#b45309]">
+                      Website Preview
+                    </p>
+                    <p className="mt-1 text-xl font-black">
+                      Your Business Online
+                    </p>
+                  </div>
+
+                  <div className="rounded-full bg-[#b45309] px-4 py-2 text-sm font-black text-white">
+                    Live
+                  </div>
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="rounded-2xl bg-[#f7efe3] p-5">
+                    <p className="text-sm font-bold text-[#5f5549]">Pages</p>
+                    <p className="mt-2 text-4xl font-black">5+</p>
+                  </div>
+
+                  <div className="rounded-2xl bg-[#f7efe3] p-5">
+                    <p className="text-sm font-bold text-[#5f5549]">
+                      Mobile Ready
+                    </p>
+                    <p className="mt-2 text-4xl font-black">100%</p>
+                  </div>
+                </div>
+
+                <div className="mt-4 rounded-2xl bg-[#b45309] p-6 text-white">
+                  <p className="text-sm font-black uppercase tracking-[0.2em] text-white/70">
+                    Built for enquiries
+                  </p>
+                  <h3 className="mt-3 text-3xl font-black leading-tight">
+                    WhatsApp, service sections, portfolio and client form.
+                  </h3>
+                </div>
+
+                <div className="mt-4 grid gap-3">
+                  <div className="h-3 rounded-full bg-[#e7d9c5]" />
+                  <div className="h-3 w-4/5 rounded-full bg-[#e7d9c5]" />
+                  <div className="h-3 w-2/3 rounded-full bg-[#e7d9c5]" />
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="mt-14 grid gap-5 lg:grid-cols-[0.8fr_1.2fr_0.8fr] lg:items-center">
-            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-7 shadow-xl shadow-[#1d1a16]/10 lg:-rotate-2">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
-                Strategy
-              </p>
-              <h3 className="mt-4 text-2xl font-black text-[#1d1a16]">
-                Clear message
-              </h3>
-              <p className="mt-3 leading-7 text-[#5f5549]">
-                Your website explains what you do, who you help, and why people
-                should trust your business.
-              </p>
-            </div>
-
-            <div className="rounded-[2.5rem] bg-[#1d1a16] p-8 text-[#fffaf0] shadow-2xl shadow-[#1d1a16]/25 lg:translate-y-8">
-              <div className="mb-8 flex items-center justify-between gap-4">
-                <p className="rounded-full bg-[#f7d58b] px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-[#1d1a16]">
-                  Featured
-                </p>
-                <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f7d58b]">
-                  WebCraft TZ
-                </p>
-              </div>
-
-              <h3 className="text-4xl font-black leading-tight md:text-5xl">
-                Premium layout built for real business enquiries.
-              </h3>
-
-              <p className="mt-5 text-lg leading-8 text-[#d8cabc]">
-                Clean sections, strong calls-to-action, mobile-friendly design,
-                and a professional look that helps visitors understand your
-                business faster.
-              </p>
-            </div>
-
-            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-7 shadow-xl shadow-[#1d1a16]/10 lg:rotate-2">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
-                Contact
-              </p>
-              <h3 className="mt-4 text-2xl font-black text-[#1d1a16]">
-                More enquiries
-              </h3>
-              <p className="mt-3 leading-7 text-[#5f5549]">
-                WhatsApp buttons and enquiry forms make it easy for visitors to
-                contact you quickly.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-16 grid gap-4 text-center md:grid-cols-4">
-            <div className="rounded-2xl border border-[#1d1a16]/10 bg-white p-5 shadow-sm">
-              <p className="text-3xl font-black text-[#1d1a16]">5+</p>
-              <p className="mt-1 text-sm font-bold text-[#5f5549]">
-                Website pages
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-[#1d1a16]/10 bg-white p-5 shadow-sm">
-              <p className="text-3xl font-black text-[#1d1a16]">100%</p>
-              <p className="mt-1 text-sm font-bold text-[#5f5549]">
-                Mobile ready
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-[#1d1a16]/10 bg-white p-5 shadow-sm">
-              <p className="text-3xl font-black text-[#1d1a16]">24/7</p>
-              <p className="mt-1 text-sm font-bold text-[#5f5549]">
-                Online presence
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-[#1d1a16]/10 bg-white p-5 shadow-sm">
-              <p className="text-3xl font-black text-[#1d1a16]">TZ</p>
-              <p className="mt-1 text-sm font-bold text-[#5f5549]">
-                Local focus
-              </p>
             </div>
           </div>
         </div>
