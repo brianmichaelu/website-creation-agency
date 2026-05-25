@@ -557,7 +557,7 @@ ${formData.get("extraMessage")}
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
             {[
               {
                 name: "Lub Run Enterprises",
