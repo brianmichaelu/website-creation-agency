@@ -659,196 +659,246 @@ ${formData.get("extraMessage")}
       </section>
 
       {/* CLIENT FORM */}
-      <section id="client-form" className="bg-[#1d1a16] px-6 py-24 text-[#fffaf0]">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
-              Client form
-            </p>
+            {/* CLIENT FORM */}
+      <section
+        id="client-form"
+        className="scroll-mt-44 bg-[#1d1a16] px-6 py-12 text-[#fffaf0]"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+            <div className="lg:sticky lg:top-48">
+              <div className="mb-6 flex items-center gap-4">
+                <span className="h-[2px] w-14 bg-[#f7d58b]" />
+                <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
+                  Client form
+                </p>
+              </div>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Send your website details directly to WhatsApp.
-            </h2>
+              <h2 className="text-3xl font-black leading-tight md:text-4xl">
+                Send your website details directly to WhatsApp.
+              </h2>
 
-            <p className="mt-6 text-lg leading-8 text-[#d8cabc]">
-              Fill in the important information so I can understand your
-              business, pages, style, deadline and content needs.
-            </p>
-          </div>
+              <p className="mt-5 text-lg leading-8 text-[#d8cabc]">
+                Fill in the important information so I can understand the
+                business, pages, style, deadline and content needs before
+                starting the website.
+              </p>
 
-          <form
-            onSubmit={handleSubmit}
-            className="rounded-[2rem] border border-white/10 bg-[#fffaf0] p-6 text-[#1d1a16] shadow-2xl shadow-black/30"
-          >
-            <div className="grid gap-4 md:grid-cols-2">
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Client name
-                </span>
-                <input
-                  name="clientName"
-                  required
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                  placeholder="Client name"
-                />
-              </label>
+              <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.06] p-6">
+                <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f7d58b]">
+                  What happens next?
+                </p>
 
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Business name
-                </span>
-                <input
-                  name="businessName"
-                  required
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                  placeholder="Business name"
-                />
-              </label>
-
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Phone number
-                </span>
-                <input
-                  name="phone"
-                  type="tel"
-                  required
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                  placeholder="+255..."
-                />
-              </label>
-
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Email
-                </span>
-                <input
-                  name="email"
-                  type="email"
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                  placeholder="example@email.com"
-                />
-              </label>
-
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Type of business
-                </span>
-                <input
-                  name="businessType"
-                  required
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                  placeholder="Hotel, restaurant, printing company..."
-                />
-              </label>
-
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Pages needed
-                </span>
-                <input
-                  name="pagesNeeded"
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                  placeholder="Home, About, Services, Contact..."
-                />
-              </label>
-
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Preferred website style
-                </span>
-                <input
-                  name="websiteStyle"
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                  placeholder="Modern, luxury, simple, corporate..."
-                />
-              </label>
-
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Deadline
-                </span>
-                <input
-                  name="deadline"
-                  type="date"
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                />
-              </label>
+                <ul className="mt-5 space-y-4 text-[#d8cabc]">
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#f7d58b]" />
+                    The form opens WhatsApp with the client details already
+                    prepared.
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#f7d58b]" />
+                    You can review the information and reply with the next
+                    steps.
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#f7d58b]" />
+                    The website plan can then be started from the submitted
+                    details.
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Do you already have a logo?
-                </span>
-                <select
-                  name="hasLogo"
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                >
-                  <option>Yes</option>
-                  <option>No</option>
-                  <option>I need one created</option>
-                </select>
-              </label>
-
-              <label className="block">
-                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                  Do you already have photos?
-                </span>
-                <select
-                  name="hasPhotos"
-                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                >
-                  <option>Yes</option>
-                  <option>No</option>
-                  <option>Some, but not enough</option>
-                </select>
-              </label>
-            </div>
-
-            <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                Services/products offered
-              </span>
-              <textarea
-                name="services"
-                className="h-28 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                placeholder="List your main services or products"
-              />
-            </label>
-
-            <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                Competitor/example websites
-              </span>
-              <textarea
-                name="examples"
-                className="h-24 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                placeholder="Paste links or describe the style you like"
-              />
-            </label>
-
-            <label className="mt-4 block">
-              <span className="mb-2 block text-sm font-bold text-[#4f4539]">
-                Extra message
-              </span>
-              <textarea
-                name="extraMessage"
-                className="h-28 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
-                placeholder="Anything else I should know?"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="mt-6 w-full cursor-pointer rounded-full bg-[#1d1a16] px-6 py-4 text-lg font-black text-[#fffaf0] transition hover:-translate-y-1 hover:bg-[#b45309]"
+            <form
+              onSubmit={handleSubmit}
+              className="rounded-[2rem] border border-white/10 bg-[#fffaf0] p-6 text-[#1d1a16] shadow-2xl shadow-black/30 md:p-8"
             >
-              Submit to WhatsApp
-            </button>
-          </form>
+              <div className="mb-6 border-b border-[#1d1a16]/10 pb-6">
+                <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
+                  Website request details
+                </p>
+                <h3 className="mt-2 text-2xl font-black">
+                  Tell me about the business
+                </h3>
+                <p className="mt-2 leading-7 text-[#5f5549]">
+                  Required fields help prepare a clearer website plan and avoid
+                  missing important business information.
+                </p>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Client name *
+                  </span>
+                  <input
+                    name="clientName"
+                    required
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                    placeholder="Client name"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Business name *
+                  </span>
+                  <input
+                    name="businessName"
+                    required
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                    placeholder="Business name"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Phone number *
+                  </span>
+                  <input
+                    name="phone"
+                    type="tel"
+                    required
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                    placeholder="+255..."
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Email
+                  </span>
+                  <input
+                    name="email"
+                    type="email"
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                    placeholder="example@email.com"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Type of business *
+                  </span>
+                  <input
+                    name="businessType"
+                    required
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                    placeholder="Hotel, restaurant, printing company..."
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Pages needed
+                  </span>
+                  <input
+                    name="pagesNeeded"
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                    placeholder="Home, About, Services, Contact..."
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Preferred website style
+                  </span>
+                  <input
+                    name="websiteStyle"
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                    placeholder="Modern, luxury, simple, corporate..."
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Deadline
+                  </span>
+                  <input
+                    name="deadline"
+                    type="date"
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  />
+                </label>
+              </div>
+
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Do you already have a logo?
+                  </span>
+                  <select
+                    name="hasLogo"
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  >
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>I need one created</option>
+                  </select>
+                </label>
+
+                <label className="block">
+                  <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                    Do you already have photos?
+                  </span>
+                  <select
+                    name="hasPhotos"
+                    className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  >
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Some, but not enough</option>
+                  </select>
+                </label>
+              </div>
+
+              <label className="mt-4 block">
+                <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                  Services/products offered
+                </span>
+                <textarea
+                  name="services"
+                  className="h-28 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="List the main services or products"
+                />
+              </label>
+
+              <label className="mt-4 block">
+                <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                  Competitor/example websites
+                </span>
+                <textarea
+                  name="examples"
+                  className="h-24 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="Paste links or describe the style you like"
+                />
+              </label>
+
+              <label className="mt-4 block">
+                <span className="mb-2 block text-sm font-black text-[#4f4539]">
+                  Extra message
+                </span>
+                <textarea
+                  name="extraMessage"
+                  className="h-28 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="Anything else I should know?"
+                />
+              </label>
+
+              <button
+                type="submit"
+                className="mt-6 w-full cursor-pointer rounded-full bg-[#1d1a16] px-6 py-4 text-lg font-black text-[#fffaf0] transition hover:-translate-y-1 hover:bg-[#b45309]"
+              >
+                Submit Details to WhatsApp
+              </button>
+
+              <p className="mt-4 text-center text-sm font-semibold text-[#5f5549]">
+                WhatsApp will open with the information already prepared.
+              </p>
+            </form>
+          </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className="bg-[#f7efe3] px-6 py-24">
         <div className="mx-auto max-w-7xl rounded-[2rem] bg-[#b45309] p-10 text-center text-white shadow-2xl shadow-[#b45309]/20 md:p-16">
