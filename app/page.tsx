@@ -173,3 +173,502 @@ ${formData.get("extraMessage")}
           </div>
         </div>
       </section>
+
+            {/* WHO THIS IS FOR */}
+      <section id="services" className="bg-[#fffaf0] px-6 py-24 text-[#1d1a16]">
+        <div className="mx-auto max-w-7xl">
+          <p className="font-black uppercase tracking-[0.3em] text-[#b45309]">
+            Who this is for
+          </p>
+
+          <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight md:text-5xl">
+            Built for businesses that need trust before the client even calls.
+          </h2>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {[
+              "Hotels & Guest Houses",
+              "Printing Companies",
+              "Clinics & Health Services",
+              "Real Estate Businesses",
+              "Restaurants & Cafes",
+              "Small Local Businesses",
+            ].map((item) => (
+              <div
+                key={item}
+                className="group rounded-[2rem] border border-[#1d1a16]/10 bg-[#f7efe3] p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#b45309]/40 hover:bg-white hover:shadow-2xl hover:shadow-[#1d1a16]/10"
+              >
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1d1a16] text-xl font-black text-[#f7d58b] transition group-hover:bg-[#b45309] group-hover:text-white">
+                  ✦
+                </div>
+
+                <h3 className="text-xl font-black">{item}</h3>
+
+                <p className="mt-3 leading-7 text-[#5f5549]">
+                  A clean website that explains your services, shows your work,
+                  and makes it easy for clients to contact you.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PACKAGES */}
+      <section id="packages" className="bg-[#1d1a16] px-6 py-24 text-[#fffaf0]">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-3xl">
+            <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
+              Website packages
+            </p>
+
+            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+              Choose a website level that matches your business stage.
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {[
+              {
+                name: "Starter Website",
+                desc: "Best for a simple online presence.",
+                features: [
+                  "One-page website",
+                  "Business intro",
+                  "Services section",
+                  "WhatsApp contact button",
+                  "Mobile responsive",
+                ],
+              },
+              {
+                name: "Business Website",
+                desc: "Best for growing businesses.",
+                features: [
+                  "Multiple sections/pages",
+                  "Service details",
+                  "Gallery or portfolio",
+                  "Client enquiry form",
+                  "Basic SEO structure",
+                ],
+              },
+              {
+                name: "Premium Website",
+                desc: "Best for businesses that need a stronger brand image.",
+                features: [
+                  "Custom modern design",
+                  "Advanced content sections",
+                  "Portfolio showcase",
+                  "Conversion-focused layout",
+                  "Launch support",
+                ],
+              },
+            ].map((pkg, index) => (
+              <div
+                key={pkg.name}
+                className={`rounded-[2rem] border p-8 transition hover:-translate-y-1 ${
+                  index === 1
+                    ? "border-[#f7d58b]/50 bg-[#fffaf0] text-[#1d1a16] shadow-2xl shadow-black/30"
+                    : "border-white/10 bg-white/5 text-[#fffaf0] hover:bg-white/10"
+                }`}
+              >
+                {index === 1 && (
+                  <div className="mb-5 inline-flex rounded-full bg-[#b45309] px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
+                    Popular
+                  </div>
+                )}
+
+                <h3 className="text-2xl font-black">{pkg.name}</h3>
+
+                <p
+                  className={`mt-3 leading-7 ${
+                    index === 1 ? "text-[#5f5549]" : "text-[#d8cabc]"
+                  }`}
+                >
+                  {pkg.desc}
+                </p>
+
+                <ul className="mt-8 space-y-4">
+                  {pkg.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className={`flex gap-3 ${
+                        index === 1 ? "text-[#332d25]" : "text-[#f3eadc]"
+                      }`}
+                    >
+                      <span
+                        className={`mt-2 h-2 w-2 rounded-full ${
+                          index === 1 ? "bg-[#b45309]" : "bg-[#f7d58b]"
+                        }`}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section id="process" className="bg-[#f7efe3] px-6 py-24">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-center font-black uppercase tracking-[0.3em] text-[#b45309]">
+            My process
+          </p>
+
+          <h2 className="mx-auto mt-4 max-w-3xl text-center text-4xl font-black leading-tight md:text-5xl">
+            Simple steps from idea to live website.
+          </h2>
+
+          <div className="mt-14 space-y-6">
+            {[
+              "Client submits business information",
+              "Content and website structure are planned",
+              "Website design and development begins",
+              "Client reviews and requests changes",
+              "Website is launched and ready to share",
+            ].map((step, index) => (
+              <div
+                key={step}
+                className="grid gap-5 rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1d1a16]/10 md:grid-cols-[80px_1fr]"
+              >
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#1d1a16] text-2xl font-black text-[#f7d58b]">
+                  {index + 1}
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-black">{step}</h3>
+                  <p className="mt-2 leading-7 text-[#5f5549]">
+                    Each stage is handled clearly so the final website matches
+                    your business, your clients and your goals.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PORTFOLIO */}
+      <section id="portfolio" className="bg-[#fffaf0] px-6 py-24 text-[#1d1a16]">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p className="font-black uppercase tracking-[0.3em] text-[#b45309]">
+                Portfolio
+              </p>
+
+              <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+                Work showcase
+              </h2>
+            </div>
+
+            <p className="max-w-xl leading-7 text-[#5f5549]">
+              A growing showcase of business website designs created for local
+              brands, service providers, hotels, and companies that need a
+              stronger online presence.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {[
+              {
+                name: "Lub Run Enterprises",
+                type: "Printing & Branding Website",
+                description:
+                  "A professional business website designed to present printing services, branded products, company information, and direct client enquiries.",
+                tag: "Live Business Site",
+              },
+              {
+                name: "Local Hotel Website",
+                type: "Hotel & Accommodation Website",
+                description:
+                  "A clean hotel website concept built to showcase rooms, amenities, location, booking enquiries, and a trusted local hospitality image.",
+                tag: "Hospitality Design",
+              },
+              {
+                name: "Business Landing Page",
+                type: "Service Business Website",
+                description:
+                  "A focused landing page structure made for small businesses that want to explain their offer quickly and turn visitors into leads.",
+                tag: "Lead Generation",
+              },
+              {
+                name: "Website Creation Agency",
+                type: "Web Design Portfolio",
+                description:
+                  "A modern agency website built to showcase services, packages, process, portfolio work, and client onboarding through WhatsApp.",
+                tag: "Current Project",
+              },
+            ].map((project) => (
+              <div
+                key={project.name}
+                className="group overflow-hidden rounded-[2rem] border border-[#1d1a16]/10 bg-[#f7efe3] shadow-sm transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#1d1a16]/10"
+              >
+                <div className="relative h-56 overflow-hidden bg-[#1d1a16]">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(247,213,139,0.42),transparent_15rem),radial-gradient(circle_at_80%_70%,rgba(180,83,9,0.35),transparent_16rem)]" />
+
+                  <div className="absolute left-6 top-6 rounded-full bg-[#fffaf0] px-4 py-2 text-sm font-black text-[#1d1a16]">
+                    {project.tag}
+                  </div>
+
+                  <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
+                    <div className="mb-4 h-3 w-24 rounded-full bg-[#f7d58b]" />
+                    <div className="mb-3 h-3 w-full rounded-full bg-white/60" />
+                    <div className="h-3 w-2/3 rounded-full bg-white/40" />
+                  </div>
+                </div>
+
+                <div className="p-7">
+                  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#b45309]">
+                    {project.type}
+                  </p>
+
+                  <h3 className="mt-3 text-2xl font-black">{project.name}</h3>
+
+                  <p className="mt-3 leading-7 text-[#5f5549]">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENT FORM */}
+      <section id="client-form" className="bg-[#1d1a16] px-6 py-24 text-[#fffaf0]">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
+              Client form
+            </p>
+
+            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+              Send your website details directly to WhatsApp.
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-[#d8cabc]">
+              Fill in the important information so I can understand your
+              business, pages, style, deadline and content needs.
+            </p>
+          </div>
+
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-[2rem] border border-white/10 bg-[#fffaf0] p-6 text-[#1d1a16] shadow-2xl shadow-black/30"
+          >
+            <div className="grid gap-4 md:grid-cols-2">
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Client name
+                </span>
+                <input
+                  name="clientName"
+                  required
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="Client name"
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Business name
+                </span>
+                <input
+                  name="businessName"
+                  required
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="Business name"
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Phone number
+                </span>
+                <input
+                  name="phone"
+                  type="tel"
+                  required
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="+255..."
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Email
+                </span>
+                <input
+                  name="email"
+                  type="email"
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="example@email.com"
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Type of business
+                </span>
+                <input
+                  name="businessType"
+                  required
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="Hotel, restaurant, printing company..."
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Pages needed
+                </span>
+                <input
+                  name="pagesNeeded"
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="Home, About, Services, Contact..."
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Preferred website style
+                </span>
+                <input
+                  name="websiteStyle"
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                  placeholder="Modern, luxury, simple, corporate..."
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Deadline
+                </span>
+                <input
+                  name="deadline"
+                  type="date"
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                />
+              </label>
+            </div>
+
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Do you already have a logo?
+                </span>
+                <select
+                  name="hasLogo"
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                >
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>I need one created</option>
+                </select>
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                  Do you already have photos?
+                </span>
+                <select
+                  name="hasPhotos"
+                  className="w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                >
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Some, but not enough</option>
+                </select>
+              </label>
+            </div>
+
+            <label className="mt-4 block">
+              <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                Services/products offered
+              </span>
+              <textarea
+                name="services"
+                className="h-28 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                placeholder="List your main services or products"
+              />
+            </label>
+
+            <label className="mt-4 block">
+              <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                Competitor/example websites
+              </span>
+              <textarea
+                name="examples"
+                className="h-24 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                placeholder="Paste links or describe the style you like"
+              />
+            </label>
+
+            <label className="mt-4 block">
+              <span className="mb-2 block text-sm font-bold text-[#4f4539]">
+                Extra message
+              </span>
+              <textarea
+                name="extraMessage"
+                className="h-28 w-full rounded-2xl border border-[#1d1a16]/10 bg-white px-4 py-3 text-[#1d1a16] outline-none transition focus:border-[#b45309] focus:ring-4 focus:ring-[#b45309]/10"
+                placeholder="Anything else I should know?"
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="mt-6 w-full cursor-pointer rounded-full bg-[#1d1a16] px-6 py-4 text-lg font-black text-[#fffaf0] transition hover:-translate-y-1 hover:bg-[#b45309]"
+            >
+              Submit to WhatsApp
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[#f7efe3] px-6 py-24">
+        <div className="mx-auto max-w-7xl rounded-[2rem] bg-[#b45309] p-10 text-center text-white shadow-2xl shadow-[#b45309]/20 md:p-16">
+          <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
+            Let&apos;s build
+          </p>
+
+          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            Ready to build your business website?
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#fff2d7]">
+            Let us turn your business information into a professional online
+            presence that clients can trust.
+          </p>
+
+          <a
+            href={`https://wa.me/${whatsappNumber}`}
+            className="mt-8 inline-block rounded-full bg-[#fffaf0] px-8 py-4 font-black text-[#1d1a16] transition hover:-translate-y-1 hover:bg-[#f7d58b]"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-[#1d1a16]/10 bg-[#fffaf0] px-6 py-10">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <p className="text-xl font-black text-[#1d1a16]">WebCraft TZ</p>
+            <p className="mt-2 text-[#5f5549]">
+              Website creation for Tanzanian businesses.
+            </p>
+          </div>
+
+          <div className="text-[#5f5549]">
+            <p>WhatsApp: +255 689 824 682</p>
+            <p>Email: lubrun.enterprises@gmail.com</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}
