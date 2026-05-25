@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07111f;
-  --foreground: #f8fafc;
+  --background: #f7efe3;
+  --foreground: #1d1a16;
 }
 
 * {
@@ -16,9 +16,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(0, 229, 255, 0.18), transparent 34rem),
-    radial-gradient(circle at 90% 10%, rgba(245, 197, 66, 0.12), transparent 28rem),
-    #07111f;
+    radial-gradient(circle at top left, rgba(217, 119, 6, 0.13), transparent 30rem),
+    radial-gradient(circle at 90% 0%, rgba(27, 94, 63, 0.10), transparent 28rem),
+    #f7efe3;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -26,38 +26,33 @@ body {
 input,
 select,
 textarea {
-  color: #0f172a;
+  color: #1d1a16;
 }
 
 ::selection {
-  background: #22d3ee;
-  color: #06111f;
+  background: #d97706;
+  color: #fffaf0;
 }
 
-.glass-card {
-  border: 1px solid rgba(148, 163, 184, 0.22);
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.76), rgba(15, 23, 42, 0.38));
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(16px);
+.premium-card {
+  border: 1px solid rgba(29, 26, 22, 0.10);
+  background: rgba(255, 250, 240, 0.86);
+  box-shadow: 0 24px 70px rgba(29, 26, 22, 0.10);
 }
 
-.light-card {
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  background: rgba(255, 255, 255, 0.94);
-  color: #0f172a;
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+.dark-card {
+  border: 1px solid rgba(255, 250, 240, 0.14);
+  background: linear-gradient(145deg, #1d1a16, #29231c);
+  box-shadow: 0 24px 70px rgba(29, 26, 22, 0.22);
 }
 
-.gradient-text {
-  background: linear-gradient(90deg, #ffffff, #67e8f9, #f8d46b);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.gold-text {
+  color: #b45309;
 }
 
-.noise {
+.editorial-grid {
   background-image:
-    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-  background-size: 44px 44px;
+    linear-gradient(rgba(29, 26, 22, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 26, 22, 0.04) 1px, transparent 1px);
+  background-size: 46px 46px;
 }
