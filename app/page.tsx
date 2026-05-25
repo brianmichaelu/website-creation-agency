@@ -76,7 +76,7 @@ ${formData.get("extraMessage")}
         </div>
 
         <div className="border-b border-[#1d1a16]/10 bg-[#fffaf0] px-6">
-          <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <div className="mx-auto flex max-w-7xl items-center justify-between py-3">
             <nav className="flex overflow-x-auto text-sm font-black uppercase text-[#5f5549]">
               <a href="#" className="border-r border-[#1d1a16]/10 px-5 py-5 transition hover:text-[#b45309]">
                 Home
