@@ -533,41 +533,47 @@ ${formData.get("extraMessage")}
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="bg-[#fffaf0] px-6 py-24 text-[#1d1a16]">
+            {/* PORTFOLIO */}
+      <section id="portfolio" className="scroll-mt-44 bg-[#fffaf0] px-6 py-12 text-[#1d1a16]">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
-              <p className="font-black uppercase tracking-[0.3em] text-[#b45309]">
-                Portfolio
-              </p>
+              <div className="mb-6 flex items-center gap-4">
+                <span className="h-[2px] w-14 bg-[#b45309]" />
+                <p className="font-black uppercase tracking-[0.3em] text-[#b45309]">
+                  Portfolio
+                </p>
+              </div>
 
-              <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-                Work showcase
+              <h2 className="max-w-2xl text-3xl font-black leading-tight md:text-4xl">
+                Website work built for real business use.
               </h2>
             </div>
 
-            <p className="max-w-xl leading-7 text-[#5f5549]">
+            <p className="text-lg leading-8 text-[#5f5549]">
               A growing showcase of business website designs created for local
-              brands, service providers, hotels, and companies that need a
+              brands, service providers, hotels and companies that need a
               stronger online presence.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
               {
                 name: "Lub Run Enterprises",
                 type: "Printing & Branding Website",
                 description:
-                  "A professional business website designed to present printing services, branded products, company information, and direct client enquiries.",
+                  "A professional business website designed to present printing services, branded products, company information and direct client enquiries.",
                 tag: "Live Business Site",
+                status: "Business Website",
               },
               {
                 name: "Local Hotel Website",
                 type: "Hotel & Accommodation Website",
                 description:
-                  "A clean hotel website concept built to showcase rooms, amenities, location, booking enquiries, and a trusted local hospitality image.",
+                  "A clean hotel website concept built to showcase rooms, amenities, location, booking enquiries and a trusted local hospitality image.",
                 tag: "Hospitality Design",
+                status: "Hotel Demo",
               },
               {
                 name: "Business Landing Page",
@@ -575,30 +581,47 @@ ${formData.get("extraMessage")}
                 description:
                   "A focused landing page structure made for small businesses that want to explain their offer quickly and turn visitors into leads.",
                 tag: "Lead Generation",
+                status: "Landing Page",
               },
               {
                 name: "Website Creation Agency",
                 type: "Web Design Portfolio",
                 description:
-                  "A modern agency website built to showcase services, packages, process, portfolio work, and client onboarding through WhatsApp.",
+                  "A modern agency website built to showcase services, packages, process, portfolio work and client onboarding through WhatsApp.",
                 tag: "Current Project",
+                status: "Agency Website",
               },
             ].map((project) => (
               <div
                 key={project.name}
                 className="group overflow-hidden rounded-[2rem] border border-[#1d1a16]/10 bg-[#f7efe3] shadow-sm transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#1d1a16]/10"
               >
-                <div className="relative h-56 overflow-hidden bg-[#1d1a16]">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(247,213,139,0.42),transparent_15rem),radial-gradient(circle_at_80%_70%,rgba(180,83,9,0.35),transparent_16rem)]" />
+                <div className="relative overflow-hidden bg-[#1d1a16] p-6">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(247,213,139,0.35),transparent_16rem),radial-gradient(circle_at_90%_80%,rgba(180,83,9,0.35),transparent_18rem)]" />
 
-                  <div className="absolute left-6 top-6 rounded-full bg-[#fffaf0] px-4 py-2 text-sm font-black text-[#1d1a16]">
-                    {project.tag}
+                  <div className="relative mb-6 flex items-center justify-between gap-4">
+                    <div className="rounded-full bg-[#fffaf0] px-4 py-2 text-sm font-black text-[#1d1a16]">
+                      {project.tag}
+                    </div>
+
+                    <div className="hidden rounded-full border border-white/15 px-4 py-2 text-sm font-black text-[#f7d58b] md:block">
+                      {project.status}
+                    </div>
                   </div>
 
-                  <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-                    <div className="mb-4 h-3 w-24 rounded-full bg-[#f7d58b]" />
-                    <div className="mb-3 h-3 w-full rounded-full bg-white/60" />
-                    <div className="h-3 w-2/3 rounded-full bg-white/40" />
+                  <div className="relative rounded-[1.5rem] border border-white/10 bg-white/10 p-5 backdrop-blur-md">
+                    <div className="mb-5 flex items-center gap-2">
+                      <span className="h-3 w-3 rounded-full bg-[#ef4444]" />
+                      <span className="h-3 w-3 rounded-full bg-[#f59e0b]" />
+                      <span className="h-3 w-3 rounded-full bg-[#22c55e]" />
+                    </div>
+
+                    <div className="rounded-2xl bg-[#fffaf0] p-5">
+                      <div className="mb-4 h-3 w-28 rounded-full bg-[#b45309]" />
+                      <div className="mb-3 h-3 w-full rounded-full bg-[#e7d9c5]" />
+                      <div className="mb-3 h-3 w-4/5 rounded-full bg-[#e7d9c5]" />
+                      <div className="h-3 w-2/3 rounded-full bg-[#e7d9c5]" />
+                    </div>
                   </div>
                 </div>
 
@@ -612,6 +635,22 @@ ${formData.get("extraMessage")}
                   <p className="mt-3 leading-7 text-[#5f5549]">
                     {project.description}
                   </p>
+
+                  <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                    <a
+                      href="#client-form"
+                      className="rounded-full bg-[#1d1a16] px-6 py-3 text-center font-black text-[#fffaf0] transition hover:-translate-y-1 hover:bg-[#b45309]"
+                    >
+                      Request Similar Website
+                    </a>
+
+                    <a
+                      href="#client-form"
+                      className="rounded-full border border-[#1d1a16]/15 px-6 py-3 text-center font-black text-[#1d1a16] transition hover:-translate-y-1 hover:border-[#b45309] hover:text-[#b45309]"
+                    >
+                      Ask About This
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
