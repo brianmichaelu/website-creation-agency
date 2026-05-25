@@ -84,90 +84,113 @@ ${formData.get("extraMessage")}
       </header>
 
       {/* HERO */}
-      <section className="editorial-grid relative overflow-hidden px-6 py-24">
-        <div className="absolute -right-28 top-20 h-[420px] w-[420px] rounded-full bg-[#d97706]/20 blur-3xl" />
+            {/* HERO */}
+      <section className="editorial-grid relative overflow-hidden px-6 py-24 md:py-28">
+        <div className="absolute -right-28 top-10 h-[420px] w-[420px] rounded-full bg-[#d97706]/20 blur-3xl" />
         <div className="absolute -left-28 bottom-0 h-[360px] w-[360px] rounded-full bg-[#1b5e3f]/10 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
-            <div className="mb-6 inline-flex rounded-full border border-[#b45309]/30 bg-[#fffaf0]/70 px-4 py-2 text-sm font-bold text-[#9a3412] shadow-sm">
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-6 inline-flex rounded-full border border-[#b45309]/30 bg-[#fffaf0]/80 px-4 py-2 text-sm font-bold text-[#9a3412] shadow-sm">
               Professional websites for serious businesses
             </div>
 
-            <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-[#1d1a16] md:text-7xl">
-              Websites that make your business look trusted, modern and ready
-              for clients.
+            <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-[#1d1a16] md:text-7xl lg:text-8xl">
+              Websites that help your business look trusted before clients call.
             </h1>
 
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#5f5549]">
+            <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-[#5f5549]">
               I create clean, mobile-friendly business websites for hotels,
               service providers, printing companies, shops, real estate agents,
               clinics, restaurants and growing brands in Tanzania.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <a
                 href="#client-form"
                 className="rounded-full bg-[#1d1a16] px-8 py-4 text-center font-black text-[#fffaf0] shadow-xl shadow-[#1d1a16]/20 transition hover:-translate-y-1 hover:bg-[#b45309]"
               >
                 Start Your Website
               </a>
+
               <a
                 href="#portfolio"
-                className="rounded-full border border-[#1d1a16]/20 bg-[#fffaf0]/70 px-8 py-4 text-center font-black text-[#1d1a16] transition hover:-translate-y-1 hover:border-[#b45309] hover:text-[#b45309]"
+                className="rounded-full border border-[#1d1a16]/20 bg-[#fffaf0]/80 px-8 py-4 text-center font-black text-[#1d1a16] transition hover:-translate-y-1 hover:border-[#b45309] hover:text-[#b45309]"
               >
                 View Work
               </a>
             </div>
           </div>
 
-          {/* Agency preview card */}
-          <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0]/70 p-4 shadow-2xl shadow-[#1d1a16]/15 backdrop-blur-xl">
-            <div className="overflow-hidden rounded-[1.5rem] bg-[#1d1a16]">
-              <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-                <div className="flex gap-2">
-                  <span className="h-3 w-3 rounded-full bg-[#ef4444]" />
-                  <span className="h-3 w-3 rounded-full bg-[#f59e0b]" />
-                  <span className="h-3 w-3 rounded-full bg-[#22c55e]" />
-                </div>
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#f7d58b]">
-                  Live Preview
+          <div className="mt-16 grid gap-5 md:grid-cols-3">
+            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0]/85 p-7 shadow-xl shadow-[#1d1a16]/10 backdrop-blur">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
+                01 / Strategy
+              </p>
+              <h3 className="mt-4 text-2xl font-black text-[#1d1a16]">
+                Clear business message
+              </h3>
+              <p className="mt-3 leading-7 text-[#5f5549]">
+                Your website explains what you do, who you help, and why people
+                should trust your business.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] bg-[#1d1a16] p-7 text-[#fffaf0] shadow-2xl shadow-[#1d1a16]/25">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f7d58b]">
+                02 / Design
+              </p>
+              <h3 className="mt-4 text-2xl font-black">
+                Premium modern layout
+              </h3>
+              <p className="mt-3 leading-7 text-[#d8cabc]">
+                Clean sections, strong buttons, mobile-friendly design, and a
+                professional look suitable for real clients.
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0]/85 p-7 shadow-xl shadow-[#1d1a16]/10 backdrop-blur">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
+                03 / Contact
+              </p>
+              <h3 className="mt-4 text-2xl font-black text-[#1d1a16]">
+                Built to get enquiries
+              </h3>
+              <p className="mt-3 leading-7 text-[#5f5549]">
+                WhatsApp buttons and enquiry forms make it easy for visitors to
+                contact you quickly.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0]/70 p-5 shadow-xl shadow-[#1d1a16]/10 backdrop-blur">
+            <div className="grid gap-4 text-center md:grid-cols-4">
+              <div className="rounded-2xl bg-white p-5">
+                <p className="text-3xl font-black text-[#1d1a16]">5+</p>
+                <p className="mt-1 text-sm font-bold text-[#5f5549]">
+                  Website pages
                 </p>
               </div>
 
-              <div className="p-6">
-                <div className="rounded-[1.5rem] bg-[#f7efe3] p-6 text-[#1d1a16]">
-                  <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
-                    Website Preview
-                  </p>
-                  <h2 className="mt-4 text-4xl font-black leading-tight">
-                    Your Business Online
-                  </h2>
-                  <p className="mt-3 text-[#5f5549]">
-                    A clean homepage, strong services section, clear contact
-                    buttons and client enquiry flow.
-                  </p>
-                </div>
+              <div className="rounded-2xl bg-white p-5">
+                <p className="text-3xl font-black text-[#1d1a16]">100%</p>
+                <p className="mt-1 text-sm font-bold text-[#5f5549]">
+                  Mobile ready
+                </p>
+              </div>
 
-                <div className="mt-5 grid grid-cols-2 gap-4">
-                  <div className="rounded-2xl border border-white/10 bg-white/10 p-5 text-white">
-                    <p className="text-sm text-[#f7d58b]">Pages</p>
-                    <p className="mt-2 text-3xl font-black">5+</p>
-                  </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/10 p-5 text-white">
-                    <p className="text-sm text-[#f7d58b]">Mobile Ready</p>
-                    <p className="mt-2 text-3xl font-black">100%</p>
-                  </div>
-                </div>
+              <div className="rounded-2xl bg-white p-5">
+                <p className="text-3xl font-black text-[#1d1a16]">24/7</p>
+                <p className="mt-1 text-sm font-bold text-[#5f5549]">
+                  Online presence
+                </p>
+              </div>
 
-                <div className="mt-5 rounded-2xl bg-[#fffaf0] p-5 text-[#1d1a16]">
-                  <p className="font-black">Client enquiry form</p>
-                  <div className="mt-4 space-y-3">
-                    <div className="h-3 rounded-full bg-[#e7d9c5]" />
-                    <div className="h-3 w-4/5 rounded-full bg-[#e7d9c5]" />
-                    <div className="h-3 w-2/3 rounded-full bg-[#e7d9c5]" />
-                  </div>
-                </div>
+              <div className="rounded-2xl bg-white p-5">
+                <p className="text-3xl font-black text-[#1d1a16]">TZ</p>
+                <p className="mt-1 text-sm font-bold text-[#5f5549]">
+                  Local business focus
+                </p>
               </div>
             </div>
           </div>
