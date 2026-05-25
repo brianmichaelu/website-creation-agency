@@ -99,11 +99,11 @@ ${formData.get("extraMessage")}
             </nav>
 
             <a
-              href="#client-form"
-              className="hidden bg-[#1d1a16] px-6 py-5 text-sm font-black uppercase text-[#fffaf0] transition hover:bg-[#b45309] md:block"
+                href="#client-form"
+                className="hidden rounded-full border-2 border-[#b45309] bg-[#fffaf0] px-6 py-3 text-sm font-black uppercase text-[#b45309] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#b45309] hover:text-white md:block"
             >
-              Request Website
-            </a>
+                Request Website
+          </a>
           </div>
         </div>
       </header>
