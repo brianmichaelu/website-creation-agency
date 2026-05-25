@@ -109,11 +109,11 @@ ${formData.get("extraMessage")}
       </header>
 
       {/* HERO */}
-      <section className="editorial-grid relative overflow-hidden px-6 py-16 md:py-20">
+      <section className="editorial-grid relative overflow-hidden px-6 py-12 md:py-16">
         <div className="absolute -right-28 top-10 h-[420px] w-[420px] rounded-full bg-[#d97706]/20 blur-3xl" />
         <div className="absolute -left-28 bottom-0 h-[360px] w-[360px] rounded-full bg-[#1b5e3f]/10 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <div className="mb-8 flex items-center gap-4">
               <span className="h-[2px] w-16 bg-[#b45309]" />
@@ -159,8 +159,8 @@ ${formData.get("extraMessage")}
               <div className="h-full w-full rounded-xl bg-white/20" />
             </div>
 
-            <div className="rounded-[2rem] bg-[#1d1a16] p-5 shadow-2xl shadow-[#1d1a16]/25">
-              <div className="rounded-[1.5rem] bg-[#fffaf0] p-5 text-[#1d1a16]">
+            <div className="rounded-[2rem] bg-[#1d1a16] p-4 shadow-2xl shadow-[#1d1a16]/25">
+              <div className="rounded-[1.5rem] bg-[#fffaf0] p-4 text-[#1d1a16]">
                 <div className="mb-5 flex items-center justify-between border-b border-[#1d1a16]/10 pb-4">
                   <div>
                     <p className="text-sm font-black uppercase tracking-[0.2em] text-[#b45309]">
