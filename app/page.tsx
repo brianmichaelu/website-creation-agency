@@ -296,9 +296,9 @@ ${formData.get("extraMessage")}
       </section>
       {/* PACKAGES */}
             {/* PACKAGES */}
-      <section id="packages" className="scroll-mt-44 bg-[#1d1a16] px-6 py-20 text-[#fffaf0]">
+      <section id="packages" className="scroll-mt-44 bg-[#1d1a16] px-6 py-12 text-[#fffaf0]">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
               <div className="mb-6 flex items-center gap-4">
                 <span className="h-[2px] w-14 bg-[#f7d58b]" />
@@ -307,7 +307,7 @@ ${formData.get("extraMessage")}
                 </p>
               </div>
 
-              <h2 className="text-3xl font-black leading-tight md:text-5xl">
+              <h2 className="max-w-2xl text-3xl font-black leading-tight md:text-4xl lg:text-5xl">
                 Choose the right website level for your business stage.
               </h2>
             </div>
@@ -319,7 +319,7 @@ ${formData.get("extraMessage")}
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 lg:grid-cols-3">
             {[
               {
                 name: "Starter Website",
