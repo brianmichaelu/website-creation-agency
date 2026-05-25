@@ -43,7 +43,7 @@ ${formData.get("extraMessage")}
             <main className="min-h-screen bg-[#f7efe3] text-[#1d1a16]">
       {/* NAVBAR */}
       <header className="sticky top-0 z-50 bg-[#fffaf0] shadow-lg shadow-[#1d1a16]/10">
-        <div className="border-b border-[#1d1a16]/10 bg-[#1d1a16] px-6 py-5 text-[#fffaf0]">
+        <div className="border-b border-[#1d1a16]/10 bg-[#1d1a16] px-6 py-4 text-[#fffaf0]">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 md:flex-row md:items-center">
             <a href="#" className="block">
               <p className="text-2xl font-black tracking-tight">
@@ -109,7 +109,7 @@ ${formData.get("extraMessage")}
       </header>
 
       {/* HERO */}
-      <section className="editorial-grid relative overflow-hidden px-6 py-12 md:py-16">
+      <section className="editorial-grid relative overflow-hidden px-6 py-10 md:py-12">
         <div className="absolute -right-28 top-10 h-[420px] w-[420px] rounded-full bg-[#d97706]/20 blur-3xl" />
         <div className="absolute -left-28 bottom-0 h-[360px] w-[360px] rounded-full bg-[#1b5e3f]/10 blur-3xl" />
 
@@ -122,7 +122,7 @@ ${formData.get("extraMessage")}
               </p>
             </div>
 
-            <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-[#1d1a16] md:text-7xl">
+            <h1 className="text-5xl font-black leading-[0.95] tracking-tight text-[#1d1a16] md:text-6xl lg:text-7xl">
               Website
               <span className="block text-[#b45309]">Design</span>
             </h1>
@@ -150,7 +150,7 @@ ${formData.get("extraMessage")}
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative lg:translate-y-6">
             <div className="absolute -left-5 top-16 hidden h-16 w-16 rotate-12 rounded-2xl bg-[#fffaf0] p-4 shadow-2xl md:block">
               <div className="h-full w-full rounded-xl bg-[#b45309]" />
             </div>
