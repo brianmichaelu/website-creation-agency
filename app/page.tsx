@@ -900,7 +900,7 @@ ${formData.get("extraMessage")}
         </div>
       </section>
               
-      {/* CTA */}
+      
             {/* CTA */}
       <section className="bg-[#f7efe3] px-6 py-16">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#1d1a16] shadow-2xl shadow-[#1d1a16]/20">
@@ -948,20 +948,73 @@ ${formData.get("extraMessage")}
           </div>
         </div>
       </section>
-      {/* FOOTER */}
-      <footer className="border-t border-[#1d1a16]/10 bg-[#fffaf0] px-6 py-10">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-center">
+      
+            {/* FOOTER */}
+      <footer className="border-t border-[#1d1a16]/10 bg-[#fffaf0] px-6 py-12 text-[#1d1a16]">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:items-start">
           <div>
-            <p className="text-xl font-black text-[#1d1a16]">WebCraft TZ</p>
-            <p className="mt-2 text-[#5f5549]">
-              Website creation for Tanzanian businesses.
+            <p className="text-2xl font-black">
+              WebCraft <span className="text-[#b45309]">TZ</span>
+            </p>
+
+            <p className="mt-2 text-sm font-black uppercase tracking-[0.28em] text-[#b45309]">
+              Website Creation Studio
+            </p>
+
+            <p className="mt-5 max-w-md leading-7 text-[#5f5549]">
+              Professional website creation for Tanzanian businesses that need
+              a stronger online presence, clear services, and easier customer
+              enquiries.
             </p>
           </div>
 
-          <div className="text-[#5f5549]">
-            <p>WhatsApp: +255 689 824 682</p>
-            <p>Email: lubrun.enterprises@gmail.com</p>
+          <div>
+            <p className="font-black uppercase tracking-[0.2em] text-[#b45309]">
+              Quick links
+            </p>
+
+            <div className="mt-4 grid gap-3 text-[#5f5549]">
+              <a href="#services" className="transition hover:text-[#b45309]">
+                Services
+              </a>
+              <a href="#packages" className="transition hover:text-[#b45309]">
+                Packages
+              </a>
+              <a href="#process" className="transition hover:text-[#b45309]">
+                Process
+              </a>
+              <a href="#portfolio" className="transition hover:text-[#b45309]">
+                Portfolio
+              </a>
+              <a href="#client-form" className="transition hover:text-[#b45309]">
+                Client Form
+              </a>
+            </div>
           </div>
+
+          <div>
+            <p className="font-black uppercase tracking-[0.2em] text-[#b45309]">
+              Contact
+            </p>
+
+            <div className="mt-4 grid gap-3 text-[#5f5549]">
+              <p>WhatsApp: +255 689 824 682</p>
+              <p>Email: lubrun.enterprises@gmail.com</p>
+              <p>Dar es Salaam, Tanzania</p>
+            </div>
+
+            <a
+              href={`https://wa.me/${whatsappNumber}`}
+              className="mt-6 inline-flex rounded-full bg-[#1d1a16] px-6 py-3 font-black text-[#fffaf0] transition hover:-translate-y-1 hover:bg-[#b45309]"
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 flex max-w-7xl flex-col justify-between gap-3 border-t border-[#1d1a16]/10 pt-6 text-sm text-[#5f5549] md:flex-row">
+          <p>© 2026 WebCraft TZ. All rights reserved.</p>
+          <p>Website creation for local businesses in Tanzania.</p>
         </div>
       </footer>
     </main>
