@@ -441,41 +441,93 @@ ${formData.get("extraMessage")}
       </section>
 
       {/* PROCESS */}
-      <section id="process" className="bg-[#f7efe3] px-6 py-24">
-        <div className="mx-auto max-w-5xl">
-          <p className="text-center font-black uppercase tracking-[0.3em] text-[#b45309]">
-            My process
-          </p>
-
-          <h2 className="mx-auto mt-4 max-w-3xl text-center text-4xl font-black leading-tight md:text-5xl">
-            Simple steps from idea to live website.
-          </h2>
-
-          <div className="mt-14 space-y-6">
-            {[
-              "Client submits business information",
-              "Content and website structure are planned",
-              "Website design and development begins",
-              "Client reviews and requests changes",
-              "Website is launched and ready to share",
-            ].map((step, index) => (
-              <div
-                key={step}
-                className="grid gap-5 rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1d1a16]/10 md:grid-cols-[80px_1fr]"
-              >
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#1d1a16] text-2xl font-black text-[#f7d58b]">
-                  {index + 1}
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-black">{step}</h3>
-                  <p className="mt-2 leading-7 text-[#5f5549]">
-                    Each stage is handled clearly so the final website matches
-                    your business, your clients and your goals.
-                  </p>
-                </div>
+            {/* PROCESS */}
+      <section id="process" className="scroll-mt-44 bg-[#f7efe3] px-6 py-12 text-[#1d1a16]">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+            <div>
+              <div className="mb-6 flex items-center gap-4">
+                <span className="h-[2px] w-14 bg-[#b45309]" />
+                <p className="font-black uppercase tracking-[0.3em] text-[#b45309]">
+                  My process
+                </p>
               </div>
-            ))}
+
+              <h2 className="max-w-2xl text-3xl font-black leading-tight md:text-4xl">
+                Simple steps from business idea to live website.
+              </h2>
+            </div>
+
+            <p className="text-lg leading-8 text-[#5f5549]">
+              The process is designed to keep everything clear: business
+              information, content planning, website design, client review,
+              final changes and launch.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div className="rounded-[2rem] bg-[#1d1a16] p-8 text-[#fffaf0] shadow-2xl shadow-[#1d1a16]/20">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f7d58b]">
+                How it works
+              </p>
+
+              <h3 className="mt-5 text-4xl font-black leading-tight">
+                A clear workflow keeps the project moving.
+              </h3>
+
+              <p className="mt-5 leading-8 text-[#d8cabc]">
+                The client provides the business details, then the website is
+                planned, designed, reviewed and prepared for launch.
+              </p>
+
+              <a
+                href="#client-form"
+                className="mt-8 inline-flex rounded-full bg-[#b45309] px-7 py-4 font-black text-white transition hover:-translate-y-1 hover:bg-[#92400e]"
+              >
+                Start With Client Form
+              </a>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Client submits business information",
+                  text: "The client shares business name, services, contact details, website style, photos, logo status and deadline.",
+                },
+                {
+                  title: "Content and website structure are planned",
+                  text: "The main sections are arranged clearly so visitors can understand the business quickly.",
+                },
+                {
+                  title: "Website design and development begins",
+                  text: "The website is built with a clean layout, mobile-friendly sections, contact buttons and brand-style visuals.",
+                },
+                {
+                  title: "Client reviews and requests changes",
+                  text: "The client checks the live preview and requests changes to text, layout, photos or contact details.",
+                },
+                {
+                  title: "Website is launched and ready to share",
+                  text: "After approval, the site is published and ready to send to customers through WhatsApp, social media or Google profile.",
+                },
+              ].map((step, index) => (
+                <div
+                  key={step.title}
+                  className="group grid gap-5 rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#b45309]/40 hover:shadow-xl hover:shadow-[#1d1a16]/10 md:grid-cols-[76px_1fr]"
+                >
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#1d1a16] text-2xl font-black text-[#f7d58b] transition group-hover:bg-[#b45309] group-hover:text-white">
+                    {index + 1}
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-black">{step.title}</h3>
+                    <p className="mt-2 leading-7 text-[#5f5549]">
+                      {step.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
