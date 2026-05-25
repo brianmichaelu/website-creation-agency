@@ -212,7 +212,7 @@ ${formData.get("extraMessage")}
 
             {/* WHO THIS IS FOR */}
             {/* WHO THIS IS FOR */}
-      <section id="services" className="scroll-mt-44 bg-[#fffaf0] px-6 py-20 text-[#1d1a16]">
+      <section id="services" className="scroll-mt-44 bg-[#fffaf0] px-6 py-14 text-[#1d1a16]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -223,7 +223,7 @@ ${formData.get("extraMessage")}
                 </p>
               </div>
 
-              <h2 className="max-w-2xl text-3xl font-black leading-tight md:text-5xl">
+              <h2 className="max-w-2xl text-3xl font-black leading-tight md:text-4xl lg:text-5xl">
                Websites built to make businesses look trusted and ready for clients.
               </h2>
             </div>
@@ -235,7 +235,7 @@ ${formData.get("extraMessage")}
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Hotels & Guest Houses",
