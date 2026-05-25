@@ -295,45 +295,60 @@ ${formData.get("extraMessage")}
         </div>
       </section>
       {/* PACKAGES */}
-      <section id="packages" className="bg-[#1d1a16] px-6 py-24 text-[#fffaf0]">
+            {/* PACKAGES */}
+      <section id="packages" className="scroll-mt-44 bg-[#1d1a16] px-6 py-20 text-[#fffaf0]">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
-              Website packages
-            </p>
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <div className="mb-6 flex items-center gap-4">
+                <span className="h-[2px] w-14 bg-[#f7d58b]" />
+                <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
+                  Website packages
+                </p>
+              </div>
 
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-              Choose a website level that matches your business stage.
-            </h2>
+              <h2 className="text-3xl font-black leading-tight md:text-5xl">
+                Choose the right website level for your business stage.
+              </h2>
+            </div>
+
+            <p className="text-lg leading-8 text-[#d8cabc]">
+              Each package is built to help a business look professional online,
+              explain its services clearly, and make it easy for visitors to
+              contact through WhatsApp or an enquiry form.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {[
               {
                 name: "Starter Website",
-                desc: "Best for a simple online presence.",
+                label: "Simple presence",
+                desc: "Best for new businesses that need a clean first website.",
                 features: [
                   "One-page website",
-                  "Business intro",
+                  "Business intro section",
                   "Services section",
                   "WhatsApp contact button",
-                  "Mobile responsive",
+                  "Mobile responsive layout",
                 ],
               },
               {
                 name: "Business Website",
-                desc: "Best for growing businesses.",
+                label: "Recommended",
+                desc: "Best for growing businesses that need stronger credibility.",
                 features: [
-                  "Multiple sections/pages",
-                  "Service details",
-                  "Gallery or portfolio",
+                  "Multiple website sections",
+                  "Detailed services area",
+                  "Gallery or portfolio section",
                   "Client enquiry form",
                   "Basic SEO structure",
                 ],
               },
               {
                 name: "Premium Website",
-                desc: "Best for businesses that need a stronger brand image.",
+                label: "Stronger brand",
+                desc: "Best for businesses that want a more polished image.",
                 features: [
                   "Custom modern design",
                   "Advanced content sections",
@@ -345,45 +360,80 @@ ${formData.get("extraMessage")}
             ].map((pkg, index) => (
               <div
                 key={pkg.name}
-                className={`rounded-[2rem] border p-8 transition hover:-translate-y-1 ${
+                className={`relative overflow-hidden rounded-[2rem] border p-8 transition hover:-translate-y-1 ${
                   index === 1
-                    ? "border-[#f7d58b]/50 bg-[#fffaf0] text-[#1d1a16] shadow-2xl shadow-black/30"
-                    : "border-white/10 bg-white/5 text-[#fffaf0] hover:bg-white/10"
+                    ? "border-[#f7d58b]/70 bg-[#fffaf0] text-[#1d1a16] shadow-2xl shadow-black/40"
+                    : "border-white/10 bg-white/[0.06] text-[#fffaf0] hover:bg-white/[0.10]"
                 }`}
               >
-                {index === 1 && (
-                  <div className="mb-5 inline-flex rounded-full bg-[#b45309] px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
-                    Popular
-                  </div>
-                )}
-
-                <h3 className="text-2xl font-black">{pkg.name}</h3>
-
-                <p
-                  className={`mt-3 leading-7 ${
-                    index === 1 ? "text-[#5f5549]" : "text-[#d8cabc]"
+                <div
+                  className={`absolute right-6 top-6 text-7xl font-black leading-none ${
+                    index === 1 ? "text-[#1d1a16]/5" : "text-white/5"
                   }`}
                 >
-                  {pkg.desc}
-                </p>
+                  0{index + 1}
+                </div>
 
-                <ul className="mt-8 space-y-4">
-                  {pkg.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className={`flex gap-3 ${
-                        index === 1 ? "text-[#332d25]" : "text-[#f3eadc]"
-                      }`}
-                    >
-                      <span
-                        className={`mt-2 h-2 w-2 rounded-full ${
-                          index === 1 ? "bg-[#b45309]" : "bg-[#f7d58b]"
+                <div className="relative">
+                  <div
+                    className={`mb-6 inline-flex rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.2em] ${
+                      index === 1
+                        ? "bg-[#b45309] text-white"
+                        : "bg-[#f7d58b] text-[#1d1a16]"
+                    }`}
+                  >
+                    {pkg.label}
+                  </div>
+
+                  <h3 className="text-2xl font-black">{pkg.name}</h3>
+
+                  <p
+                    className={`mt-4 leading-7 ${
+                      index === 1 ? "text-[#5f5549]" : "text-[#d8cabc]"
+                    }`}
+                  >
+                    {pkg.desc}
+                  </p>
+
+                  <div
+                    className={`my-7 h-[1px] ${
+                      index === 1 ? "bg-[#1d1a16]/10" : "bg-white/10"
+                    }`}
+                  />
+
+                  <ul className="space-y-4">
+                    {pkg.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className={`flex gap-3 leading-7 ${
+                          index === 1 ? "text-[#332d25]" : "text-[#f3eadc]"
                         }`}
-                      />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                      >
+                        <span
+                          className={`mt-2 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-black ${
+                            index === 1
+                              ? "bg-[#b45309] text-white"
+                              : "bg-[#f7d58b] text-[#1d1a16]"
+                          }`}
+                        >
+                          ✓
+                        </span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href="#client-form"
+                    className={`mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-center font-black transition hover:-translate-y-1 ${
+                      index === 1
+                        ? "bg-[#1d1a16] text-[#fffaf0] hover:bg-[#b45309]"
+                        : "border border-white/15 bg-white/10 text-[#fffaf0] hover:border-[#f7d58b] hover:bg-[#f7d58b] hover:text-[#1d1a16]"
+                    }`}
+                  >
+                    Request This Package
+                  </a>
+                </div>
               </div>
             ))}
           </div>
