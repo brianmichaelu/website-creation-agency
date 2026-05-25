@@ -211,45 +211,90 @@ ${formData.get("extraMessage")}
       </section>
 
             {/* WHO THIS IS FOR */}
+            {/* WHO THIS IS FOR */}
       <section id="services" className="bg-[#fffaf0] px-6 py-24 text-[#1d1a16]">
         <div className="mx-auto max-w-7xl">
-          <p className="font-black uppercase tracking-[0.3em] text-[#b45309]">
-            Who this is for
-          </p>
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <div className="mb-6 flex items-center gap-4">
+                <span className="h-[2px] w-14 bg-[#b45309]" />
+                <p className="font-black uppercase tracking-[0.3em] text-[#b45309]">
+                  Who this is for
+                </p>
+              </div>
 
-          <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight md:text-5xl">
-            Built for businesses that need trust before the client even calls.
-          </h2>
+              <h2 className="text-4xl font-black leading-tight md:text-5xl">
+                Websites built for businesses that need trust before the client
+                even calls.
+              </h2>
+            </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            <p className="text-lg leading-8 text-[#5f5549]">
+              Whether your client runs a hotel, clinic, restaurant, real estate
+              business or service company, the website should explain the
+              business clearly, show credibility, and make enquiries easy.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
-              "Hotels & Guest Houses",
-              "Printing Companies",
-              "Clinics & Health Services",
-              "Real Estate Businesses",
-              "Restaurants & Cafes",
-              "Small Local Businesses",
+              {
+                title: "Hotels & Guest Houses",
+                number: "01",
+                text: "Show rooms, amenities, location, gallery photos and booking enquiry options in a professional way.",
+              },
+              {
+                title: "Printing Companies",
+                number: "02",
+                text: "Present printing services, branded products, sample work, quotation requests and WhatsApp orders.",
+              },
+              {
+                title: "Clinics & Health Services",
+                number: "03",
+                text: "Build trust with service details, opening hours, contact information and a clean professional layout.",
+              },
+              {
+                title: "Real Estate Businesses",
+                number: "04",
+                text: "Show properties, services, company information and enquiry buttons for buyers, renters or investors.",
+              },
+              {
+                title: "Restaurants & Cafes",
+                number: "05",
+                text: "Display food, location, opening hours, menu highlights, gallery photos and direct contact options.",
+              },
+              {
+                title: "Small Local Businesses",
+                number: "06",
+                text: "Give growing businesses a serious online presence with clear services, contact buttons and trust-building sections.",
+              },
             ].map((item) => (
               <div
-                key={item}
-                className="group rounded-[2rem] border border-[#1d1a16]/10 bg-[#f7efe3] p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#b45309]/40 hover:bg-white hover:shadow-2xl hover:shadow-[#1d1a16]/10"
+                key={item.title}
+                className="group relative overflow-hidden rounded-[2rem] border border-[#1d1a16]/10 bg-[#f7efe3] p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#b45309]/40 hover:bg-white hover:shadow-2xl hover:shadow-[#1d1a16]/10"
               >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1d1a16] text-xl font-black text-[#f7d58b] transition group-hover:bg-[#b45309] group-hover:text-white">
-                  ✦
+                <div className="absolute right-6 top-5 text-6xl font-black leading-none text-[#1d1a16]/5 transition group-hover:text-[#b45309]/10">
+                  {item.number}
                 </div>
 
-                <h3 className="text-xl font-black">{item}</h3>
+                <div className="relative">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1d1a16] text-sm font-black text-[#f7d58b] transition group-hover:bg-[#b45309] group-hover:text-white">
+                    {item.number}
+                  </div>
 
-                <p className="mt-3 leading-7 text-[#5f5549]">
-                  A clean website that explains your services, shows your work,
-                  and makes it easy for clients to contact you.
-                </p>
+                  <h3 className="text-2xl font-black">{item.title}</h3>
+
+                  <p className="mt-4 leading-7 text-[#5f5549]">
+                    {item.text}
+                  </p>
+
+                  <div className="mt-6 h-[2px] w-16 bg-[#b45309] transition-all group-hover:w-28" />
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* PACKAGES */}
       <section id="packages" className="bg-[#1d1a16] px-6 py-24 text-[#fffaf0]">
         <div className="mx-auto max-w-7xl">
