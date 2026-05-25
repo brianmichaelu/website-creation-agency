@@ -711,7 +711,7 @@ ${formData.get("extraMessage")}
 
             <form
               onSubmit={handleSubmit}
-              className="rounded-[2rem] border border-white/10 bg-[#fffaf0] p-6 text-[#1d1a16] shadow-2xl shadow-black/30 md:p-8"
+              className="rounded-[2rem] border border-white/10 bg-[#fffaf0] p-6 text-[#1d1a16] shadow-2xl shadow-black/30 md:p-8 lg:mt-8"
             >
               <div className="mb-6 border-b border-[#1d1a16]/10 pb-6">
                 <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
