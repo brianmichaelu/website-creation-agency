@@ -899,31 +899,55 @@ ${formData.get("extraMessage")}
           </div>
         </div>
       </section>
+              
       {/* CTA */}
-      <section className="bg-[#f7efe3] px-6 py-24">
-        <div className="mx-auto max-w-7xl rounded-[2rem] bg-[#b45309] p-10 text-center text-white shadow-2xl shadow-[#b45309]/20 md:p-16">
-          <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
-            Let&apos;s build
-          </p>
+            {/* CTA */}
+      <section className="bg-[#f7efe3] px-6 py-16">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#1d1a16] shadow-2xl shadow-[#1d1a16]/20">
+          <div className="grid gap-8 p-8 text-[#fffaf0] md:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <div className="mb-6 flex items-center gap-4">
+                <span className="h-[2px] w-14 bg-[#f7d58b]" />
+                <p className="font-black uppercase tracking-[0.3em] text-[#f7d58b]">
+                  Let&apos;s build
+                </p>
+              </div>
 
-          <h2 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
-            Ready to build your business website?
-          </h2>
+              <h2 className="max-w-3xl text-3xl font-black leading-tight md:text-5xl">
+                Ready to turn your business information into a professional
+                website?
+              </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#fff2d7]">
-            Let us turn your business information into a professional online
-            presence that clients can trust.
-          </p>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-[#d8cabc]">
+                Send your details through WhatsApp and start with a clear plan
+                for your website structure, content, design and launch.
+              </p>
+            </div>
 
-          <a
-            href={`https://wa.me/${whatsappNumber}`}
-            className="mt-8 inline-block rounded-full bg-[#fffaf0] px-8 py-4 font-black text-[#1d1a16] transition hover:-translate-y-1 hover:bg-[#f7d58b]"
-          >
-            Chat on WhatsApp
-          </a>
+            <div className="rounded-[2rem] bg-[#fffaf0] p-6 text-[#1d1a16]">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
+                Start here
+              </p>
+
+              <h3 className="mt-3 text-2xl font-black">
+                Request a website consultation
+              </h3>
+
+              <p className="mt-3 leading-7 text-[#5f5549]">
+                Share your business type, services, pages needed and preferred
+                style so the website direction is clear from the beginning.
+              </p>
+
+              <a
+                href={`https://wa.me/${whatsappNumber}`}
+                className="mt-6 inline-flex w-full justify-center rounded-full bg-[#b45309] px-8 py-4 text-center font-black text-white transition hover:-translate-y-1 hover:bg-[#92400e]"
+              >
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
       </section>
-
       {/* FOOTER */}
       <footer className="border-t border-[#1d1a16]/10 bg-[#fffaf0] px-6 py-10">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-center">
