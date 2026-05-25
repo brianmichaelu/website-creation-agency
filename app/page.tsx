@@ -84,50 +84,53 @@ ${formData.get("extraMessage")}
       </header>
 
       {/* HERO */}
-      <section className="editorial-grid relative overflow-hidden px-6 py-14 md:py-20">
-        <div className="absolute -right-28 top-10 h-[420px] w-[420px] rounded-full bg-[#d97706]/20 blur-3xl" />
+            {/* HERO */}
+      <section className="editorial-grid relative overflow-hidden px-6 py-16 md:py-20">
+        <div className="absolute -right-32 top-8 h-[420px] w-[420px] rounded-full bg-[#d97706]/20 blur-3xl" />
         <div className="absolute -left-28 bottom-0 h-[360px] w-[360px] rounded-full bg-[#1b5e3f]/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div className="grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-start">
             <div>
               <div className="mb-6 inline-flex rounded-full border border-[#b45309]/30 bg-[#fffaf0]/85 px-4 py-2 text-sm font-black text-[#9a3412] shadow-sm">
                 Professional websites for serious businesses
               </div>
 
-              <h1 className="text-4xl font-black leading-tight tracking-tight text-[#1d1a16] md:text-6xl">
-                Websites that make your business look trusted, modern and ready
+              <h1 className="max-w-5xl text-5xl font-black leading-[0.9] tracking-tight text-[#1d1a16] md:text-7xl lg:text-8xl">
+                Websites that make local brands look bigger, sharper and ready
                 for clients.
               </h1>
             </div>
 
-            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0]/90 p-6 shadow-xl shadow-[#1d1a16]/10 backdrop-blur">
-              <p className="text-lg leading-8 text-[#5f5549]">
-                I create clean, mobile-friendly business websites for hotels,
-                service providers, printing companies, shops, real estate
-                agents, clinics, restaurants and growing brands in Tanzania.
-              </p>
+            <div className="lg:pt-24">
+              <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0]/90 p-6 shadow-xl shadow-[#1d1a16]/10 backdrop-blur">
+                <p className="text-lg leading-8 text-[#5f5549]">
+                  I create clean, mobile-friendly business websites for hotels,
+                  service providers, printing companies, shops, real estate
+                  agents, clinics, restaurants and growing brands in Tanzania.
+                </p>
 
-              <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="#client-form"
-                  className="rounded-full bg-[#1d1a16] px-8 py-4 text-center font-black text-[#fffaf0] shadow-xl shadow-[#1d1a16]/20 transition hover:-translate-y-1 hover:bg-[#b45309]"
-                >
-                  Start Your Website
-                </a>
+                <div className="mt-7 flex flex-col gap-4">
+                  <a
+                    href="#client-form"
+                    className="rounded-full bg-[#1d1a16] px-8 py-4 text-center font-black text-[#fffaf0] shadow-xl shadow-[#1d1a16]/20 transition hover:-translate-y-1 hover:bg-[#b45309]"
+                  >
+                    Start Your Website
+                  </a>
 
-                <a
-                  href="#portfolio"
-                  className="rounded-full border border-[#1d1a16]/20 bg-white px-8 py-4 text-center font-black text-[#1d1a16] transition hover:-translate-y-1 hover:border-[#b45309] hover:text-[#b45309]"
-                >
-                  View Work
-                </a>
+                  <a
+                    href="#portfolio"
+                    className="rounded-full border border-[#1d1a16]/20 bg-white px-8 py-4 text-center font-black text-[#1d1a16] transition hover:-translate-y-1 hover:border-[#b45309] hover:text-[#b45309]"
+                  >
+                    View Work
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-7 shadow-xl shadow-[#1d1a16]/10">
+          <div className="mt-14 grid gap-5 lg:grid-cols-[0.8fr_1.2fr_0.8fr] lg:items-center">
+            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-7 shadow-xl shadow-[#1d1a16]/10 lg:-rotate-2">
               <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
                 Strategy
               </p>
@@ -140,18 +143,28 @@ ${formData.get("extraMessage")}
               </p>
             </div>
 
-            <div className="rounded-[2rem] bg-[#1d1a16] p-7 text-[#fffaf0] shadow-2xl shadow-[#1d1a16]/25">
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f7d58b]">
-                Design
-              </p>
-              <h3 className="mt-4 text-2xl font-black">Premium layout</h3>
-              <p className="mt-3 leading-7 text-[#d8cabc]">
-                Clean sections, strong buttons, mobile-friendly design, and a
-                professional look suitable for real clients.
+            <div className="rounded-[2.5rem] bg-[#1d1a16] p-8 text-[#fffaf0] shadow-2xl shadow-[#1d1a16]/25 lg:translate-y-8">
+              <div className="mb-8 flex items-center justify-between gap-4">
+                <p className="rounded-full bg-[#f7d58b] px-4 py-2 text-sm font-black uppercase tracking-[0.2em] text-[#1d1a16]">
+                  Featured
+                </p>
+                <p className="text-sm font-black uppercase tracking-[0.25em] text-[#f7d58b]">
+                  WebCraft TZ
+                </p>
+              </div>
+
+              <h3 className="text-4xl font-black leading-tight md:text-5xl">
+                Premium layout built for real business enquiries.
+              </h3>
+
+              <p className="mt-5 text-lg leading-8 text-[#d8cabc]">
+                Clean sections, strong calls-to-action, mobile-friendly design,
+                and a professional look that helps visitors understand your
+                business faster.
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-7 shadow-xl shadow-[#1d1a16]/10">
+            <div className="rounded-[2rem] border border-[#1d1a16]/10 bg-[#fffaf0] p-7 shadow-xl shadow-[#1d1a16]/10 lg:rotate-2">
               <p className="text-sm font-black uppercase tracking-[0.25em] text-[#b45309]">
                 Contact
               </p>
@@ -165,7 +178,7 @@ ${formData.get("extraMessage")}
             </div>
           </div>
 
-          <div className="mt-6 grid gap-4 text-center md:grid-cols-4">
+          <div className="mt-16 grid gap-4 text-center md:grid-cols-4">
             <div className="rounded-2xl border border-[#1d1a16]/10 bg-white p-5 shadow-sm">
               <p className="text-3xl font-black text-[#1d1a16]">5+</p>
               <p className="mt-1 text-sm font-bold text-[#5f5549]">
