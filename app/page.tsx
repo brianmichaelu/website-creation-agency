@@ -689,7 +689,7 @@ ${formData.get("extraMessage")}`;
                       <img
                         src={project.image}
                         alt={`${project.name} website preview`}
-                        className="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                        className="h-64 w-full bg-white object-contain object-top transition duration-500 group-hover:scale-105"
                       />
                     </div>
                   </div>
