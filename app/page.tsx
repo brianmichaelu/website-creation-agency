@@ -3,12 +3,14 @@
 export default function Home() {
   const whatsappNumber = "255689824682";
 
-  const createPortfolioWhatsAppLink = (projectName: string, projectType: string) => {
-  const message = `Hello, I saw the ${projectName} sample website for ${projectType}. I would like to request a similar website for my business.`;
+  const createPortfolioWhatsAppLink = (
+    projectName: string,
+    projectType: string
+  ) => {
+    const message = `Hello, I saw the ${projectName} sample website for ${projectType}. I would like to request a similar website for my business.`;
 
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
-
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  };
 
   const createPackageWhatsAppLink = (
     packageName: string,
@@ -472,18 +474,18 @@ ${formData.get("extraMessage")}`;
                     ))}
                   </ul>
 
-                 <a
-                      href={createPackageWhatsAppLink(pkg.name, pkg.price, pkg.features)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-center font-black transition hover:-translate-y-1 ${
+                  <a
+                    href={createPackageWhatsAppLink(pkg.name, pkg.price, pkg.features)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-center font-black transition hover:-translate-y-1 ${
                       index === 1
-                      ? "bg-[#1d1a16] text-[#fffaf0] hover:bg-[#b45309]"
-                      : "border border-white/15 bg-white/10 text-[#fffaf0] hover:border-[#f7d58b] hover:bg-[#f7d58b] hover:text-[#1d1a16]"
-                }`}
-                >
-                      {pkg.button}
-                </a>
+                        ? "bg-[#1d1a16] text-[#fffaf0] hover:bg-[#b45309]"
+                        : "border border-white/15 bg-white/10 text-[#fffaf0] hover:border-[#f7d58b] hover:bg-[#f7d58b] hover:text-[#1d1a16]"
+                    }`}
+                  >
+                    {pkg.button}
+                  </a>
                 </div>
               </div>
             ))}
@@ -593,7 +595,6 @@ ${formData.get("extraMessage")}`;
       </section>
 
       {/* PORTFOLIO */}
-            {/* PORTFOLIO */}
       <section id="portfolio" className="scroll-mt-44 bg-[#fffaf0] px-6 py-12 text-[#1d1a16]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
@@ -627,6 +628,7 @@ ${formData.get("extraMessage")}`;
                 tag: "Live Business Site",
                 status: "Business Website",
                 url: "https://lubrun-website-ozvi.vercel.app/#home",
+                image: "/images/lubrun-preview.png",
               },
               {
                 name: "Hotel Website Demo",
@@ -636,6 +638,7 @@ ${formData.get("extraMessage")}`;
                 tag: "Hospitality Design",
                 status: "Hotel Demo",
                 url: "https://hotel-website-alpha-mocha.vercel.app/",
+                image: "/images/hotel-preview.png",
               },
               {
                 name: "Airline & Travel Booking Website",
@@ -645,6 +648,7 @@ ${formData.get("extraMessage")}`;
                 tag: "Travel Website",
                 status: "Booking Demo",
                 url: "https://airline-website-orcin.vercel.app/",
+                image: "/images/airline-preview.png",
               },
               {
                 name: "Website Creation Agency",
@@ -654,6 +658,7 @@ ${formData.get("extraMessage")}`;
                 tag: "Current Project",
                 status: "Agency Website",
                 url: "https://website-creation-agency-sepia.vercel.app/",
+                image: "/images/agency-preview.png",
               },
             ].map((project) => (
               <div
@@ -673,18 +678,19 @@ ${formData.get("extraMessage")}`;
                     </div>
                   </div>
 
-                  <div className="relative rounded-[1.5rem] border border-white/10 bg-white/10 p-5 backdrop-blur-md">
-                    <div className="mb-5 flex items-center gap-2">
+                  <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/10 p-4 backdrop-blur-md">
+                    <div className="mb-4 flex items-center gap-2">
                       <span className="h-3 w-3 rounded-full bg-[#ef4444]" />
                       <span className="h-3 w-3 rounded-full bg-[#f59e0b]" />
                       <span className="h-3 w-3 rounded-full bg-[#22c55e]" />
                     </div>
 
-                    <div className="rounded-2xl bg-[#fffaf0] p-5">
-                      <div className="mb-4 h-3 w-28 rounded-full bg-[#b45309]" />
-                      <div className="mb-3 h-3 w-full rounded-full bg-[#e7d9c5]" />
-                      <div className="mb-3 h-3 w-4/5 rounded-full bg-[#e7d9c5]" />
-                      <div className="h-3 w-2/3 rounded-full bg-[#e7d9c5]" />
+                    <div className="overflow-hidden rounded-2xl bg-[#fffaf0]">
+                      <img
+                        src={project.image}
+                        alt={`${project.name} website preview`}
+                        className="h-64 w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                      />
                     </div>
                   </div>
                 </div>
@@ -725,6 +731,7 @@ ${formData.get("extraMessage")}`;
           </div>
         </div>
       </section>
+
       {/* CLIENT FORM */}
       <section
         id="client-form"
