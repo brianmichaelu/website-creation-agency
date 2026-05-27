@@ -1,5 +1,11 @@
 "use client";
 
+const createPortfolioWhatsAppLink = (projectName: string, projectType: string) => {
+  const message = `Hello, I saw the ${projectName} sample website for ${projectType}. I would like to request a similar website for my business.`;
+
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+};
+
 export default function Home() {
   const whatsappNumber = "255689824682";
 
@@ -586,6 +592,7 @@ ${formData.get("extraMessage")}`;
       </section>
 
       {/* PORTFOLIO */}
+            {/* PORTFOLIO */}
       <section id="portfolio" className="scroll-mt-44 bg-[#fffaf0] px-6 py-12 text-[#1d1a16]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
@@ -598,14 +605,14 @@ ${formData.get("extraMessage")}`;
               </div>
 
               <h2 className="max-w-2xl text-3xl font-black leading-tight md:text-4xl">
-                Website work built for real business use.
+                Sample websites clients can view before choosing a design.
               </h2>
             </div>
 
             <p className="text-lg leading-8 text-[#5f5549]">
-              A growing showcase of business website designs created for local
-              brands, service providers, hotels and companies that need a
-              stronger online presence.
+              Explore real demo websites created for different business types.
+              Each sample can be customized with the client&apos;s brand, colors,
+              photos, services, contact details, and business goals.
             </p>
           </div>
 
@@ -618,22 +625,25 @@ ${formData.get("extraMessage")}`;
                   "A professional business website designed to present printing services, branded products, company information and direct client enquiries.",
                 tag: "Live Business Site",
                 status: "Business Website",
+                url: "https://lubrun-website-ozvi.vercel.app/#home",
               },
               {
-                name: "Local Hotel Website",
+                name: "Hotel Website Demo",
                 type: "Hotel & Accommodation Website",
                 description:
-                  "A clean hotel website concept built to showcase rooms, amenities, location, booking enquiries and a trusted local hospitality image.",
+                  "A clean hotel website concept built to showcase rooms, amenities, location, booking enquiries and a trusted hospitality image.",
                 tag: "Hospitality Design",
                 status: "Hotel Demo",
+                url: "https://hotel-website-alpha-mocha.vercel.app/",
               },
               {
-                name: "Business Landing Page",
-                type: "Service Business Website",
+                name: "Airline & Travel Booking Website",
+                type: "Travel & Flight Booking Website",
                 description:
-                  "A focused landing page structure made for small businesses that want to explain their offer quickly and turn visitors into leads.",
-                tag: "Lead Generation",
-                status: "Landing Page",
+                  "A travel-style website demo with flight request sections, booking flow, service presentation and enquiry-focused layout.",
+                tag: "Travel Website",
+                status: "Booking Demo",
+                url: "https://airline-website-orcin.vercel.app/",
               },
               {
                 name: "Website Creation Agency",
@@ -642,6 +652,7 @@ ${formData.get("extraMessage")}`;
                   "A modern agency website built to showcase services, packages, process, portfolio work and client onboarding through WhatsApp.",
                 tag: "Current Project",
                 status: "Agency Website",
+                url: "https://website-creation-agency-sepia.vercel.app/",
               },
             ].map((project) => (
               <div
@@ -690,17 +701,21 @@ ${formData.get("extraMessage")}`;
 
                   <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                     <a
-                      href="#client-form"
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="rounded-full bg-[#1d1a16] px-6 py-3 text-center font-black text-[#fffaf0] transition hover:-translate-y-1 hover:bg-[#b45309]"
                     >
-                      Request Similar Website
+                      View Demo
                     </a>
 
                     <a
-                      href="#client-form"
+                      href={createPortfolioWhatsAppLink(project.name, project.type)}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="rounded-full border border-[#1d1a16]/15 px-6 py-3 text-center font-black text-[#1d1a16] transition hover:-translate-y-1 hover:border-[#b45309] hover:text-[#b45309]"
                     >
-                      Ask About This
+                      Request Similar Website
                     </a>
                   </div>
                 </div>
@@ -709,7 +724,6 @@ ${formData.get("extraMessage")}`;
           </div>
         </div>
       </section>
-
       {/* CLIENT FORM */}
       <section
         id="client-form"
