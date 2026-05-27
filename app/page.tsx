@@ -190,10 +190,10 @@ ${formData.get("extraMessage")}`;
                 <div className="mb-5 flex items-center justify-between border-b border-[#1d1a16]/10 pb-4">
                   <div>
                     <p className="text-sm font-black uppercase tracking-[0.2em] text-[#b45309]">
-                      Website Preview
+                      WebCraft TZ Preview
                     </p>
                     <p className="mt-1 text-xl font-black">
-                      Your Business Online
+                      Professional Website Package
                     </p>
                   </div>
 
@@ -218,10 +218,10 @@ ${formData.get("extraMessage")}`;
 
                 <div className="mt-4 rounded-2xl bg-[#b45309] p-6 text-white">
                   <p className="text-sm font-black uppercase tracking-[0.2em] text-white/70">
-                    Built for enquiries
+                    Built to get clients
                   </p>
                   <h3 className="mt-3 text-3xl font-black leading-tight">
-                    WhatsApp, service sections, portfolio and client form.
+                    Modern design, WhatsApp enquiries, portfolio previews and client request forms.
                   </h3>
                 </div>
 
