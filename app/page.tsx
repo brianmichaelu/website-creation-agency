@@ -1,13 +1,14 @@
 "use client";
 
-const createPortfolioWhatsAppLink = (projectName: string, projectType: string) => {
+export default function Home() {
+  const whatsappNumber = "255689824682";
+
+  const createPortfolioWhatsAppLink = (projectName: string, projectType: string) => {
   const message = `Hello, I saw the ${projectName} sample website for ${projectType}. I would like to request a similar website for my business.`;
 
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
-export default function Home() {
-  const whatsappNumber = "255689824682";
 
   const createPackageWhatsAppLink = (
     packageName: string,
