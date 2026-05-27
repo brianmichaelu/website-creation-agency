@@ -40,7 +40,7 @@ ${formData.get("extraMessage")}
   };
 
   return (
-            <main className="min-h-screen bg-[#f7efe3] text-[#1d1a16]">
+    <main className="min-h-screen bg-[#f7efe3] text-[#1d1a16]">
       {/* NAVBAR */}
       <header className="sticky top-0 z-50 bg-[#fffaf0] shadow-lg shadow-[#1d1a16]/10">
         <div className="border-b border-[#1d1a16]/10 bg-[#1d1a16] px-6 py-4 text-[#fffaf0]">
@@ -99,11 +99,11 @@ ${formData.get("extraMessage")}
             </nav>
 
             <a
-                href="#client-form"
-                className="hidden rounded-full border-2 border-[#b45309] bg-[#fffaf0] px-6 py-3 text-sm font-black uppercase text-[#b45309] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#b45309] hover:text-white md:block"
+              href="#client-form"
+              className="hidden rounded-full border-2 border-[#b45309] bg-[#fffaf0] px-6 py-3 text-sm font-black uppercase text-[#b45309] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#b45309] hover:text-white md:block"
             >
-                Request Website
-          </a>
+              Request Website
+            </a>
           </div>
         </div>
       </header>
@@ -210,8 +210,7 @@ ${formData.get("extraMessage")}
         </div>
       </section>
 
-            {/* WHO THIS IS FOR */}
-            {/* WHO THIS IS FOR */}
+      {/* WHO THIS IS FOR */}
       <section id="services" className="scroll-mt-44 bg-[#fffaf0] px-6 py-10 md:py-12 text-[#1d1a16]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
@@ -224,7 +223,7 @@ ${formData.get("extraMessage")}
               </div>
 
               <h2 className="max-w-2xl text-3xl font-black leading-tight md:text-4xl">
-               Websites built to make businesses look trusted and ready for clients.
+                Websites built to make businesses look trusted and ready for clients.
               </h2>
             </div>
 
@@ -294,8 +293,8 @@ ${formData.get("extraMessage")}
           </div>
         </div>
       </section>
+
       {/* PACKAGES */}
-            {/* PACKAGES */}
       <section id="packages" className="scroll-mt-44 bg-[#1d1a16] px-6 py-8 md:py-10 text-[#fffaf0]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
@@ -308,14 +307,14 @@ ${formData.get("extraMessage")}
               </div>
 
               <h2 className="max-w-2xl text-3xl font-black leading-tight md:text-4xl">
-                Choose the right website level for your business stage.
+                Choose the right website package for your business.
               </h2>
             </div>
 
             <p className="text-lg leading-8 text-[#d8cabc]">
-              Each package is built to help a business look professional online,
-              explain its services clearly, and make it easy for visitors to
-              contact through WhatsApp or an enquiry form.
+              Simple and clear website packages for Tanzanian businesses that
+              want a professional online presence, better credibility, and easy
+              customer enquiries through WhatsApp or forms.
             </p>
           </div>
 
@@ -324,38 +323,50 @@ ${formData.get("extraMessage")}
               {
                 name: "Starter Website",
                 label: "Simple presence",
-                desc: "Best for new businesses that need a clean first website.",
+                price: "TZS 250,000",
+                desc: "Good for small businesses that need a simple online presence.",
                 features: [
-                  "One-page website",
-                  "Business intro section",
-                  "Services section",
-                  "WhatsApp contact button",
-                  "Mobile responsive layout",
+                  "1–3 pages",
+                  "Mobile-friendly design",
+                  "WhatsApp button",
+                  "Contact section",
+                  "Basic SEO setup",
+                  "Delivery: 3–5 days",
                 ],
+                button: "Choose Starter",
               },
               {
                 name: "Business Website",
                 label: "Recommended",
-                desc: "Best for growing businesses that need stronger credibility.",
+                price: "TZS 450,000",
+                desc: "Best for hotels, agencies, shops, service businesses, and companies.",
                 features: [
-                  "Multiple website sections",
-                  "Detailed services area",
+                  "4–7 pages",
+                  "Professional custom design",
                   "Gallery or portfolio section",
-                  "Client enquiry form",
-                  "Basic SEO structure",
+                  "Contact form or WhatsApp form",
+                  "Google Maps section",
+                  "Basic SEO setup",
+                  "Delivery: 5–10 days",
                 ],
+                button: "Choose Business",
               },
               {
                 name: "Premium Website",
-                label: "Stronger brand",
-                desc: "Best for businesses that want a more polished image.",
+                label: "Advanced",
+                price: "From TZS 750,000",
+                desc: "For clients who want a larger website with more advanced features.",
                 features: [
-                  "Custom modern design",
-                  "Advanced content sections",
-                  "Portfolio showcase",
-                  "Conversion-focused layout",
-                  "Launch support",
+                  "8+ pages",
+                  "Advanced custom design",
+                  "Booking or request form",
+                  "Admin/dashboard option",
+                  "Blog/news section option",
+                  "API/integration discussion",
+                  "Priority support",
+                  "Delivery: 10–21 days",
                 ],
+                button: "Discuss Premium",
               },
             ].map((pkg, index) => (
               <div
@@ -395,6 +406,20 @@ ${formData.get("extraMessage")}
                     {pkg.desc}
                   </p>
 
+                  <div className="mt-6">
+                    <p
+                      className={`text-sm font-black uppercase tracking-[0.2em] ${
+                        index === 1 ? "text-[#b45309]" : "text-[#f7d58b]"
+                      }`}
+                    >
+                      Starting at
+                    </p>
+
+                    <p className="mt-2 text-4xl font-black leading-tight">
+                      {pkg.price}
+                    </p>
+                  </div>
+
                   <div
                     className={`my-7 h-[1px] ${
                       index === 1 ? "bg-[#1d1a16]/10" : "bg-white/10"
@@ -431,17 +456,26 @@ ${formData.get("extraMessage")}
                         : "border border-white/15 bg-white/10 text-[#fffaf0] hover:border-[#f7d58b] hover:bg-[#f7d58b] hover:text-[#1d1a16]"
                     }`}
                   >
-                    Request This Package
+                    {pkg.button}
                   </a>
                 </div>
               </div>
             ))}
           </div>
+
+          <div className="mt-8 rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 text-[#d8cabc]">
+            <p className="leading-8">
+              <span className="font-black text-[#f7d58b]">Note:</span> Prices
+              may change depending on the number of pages, features, content,
+              images, forms, and integrations needed. Domain, hosting, logo
+              design, and paid tools are charged separately unless included in
+              the agreement.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* PROCESS */}
-            {/* PROCESS */}
       <section id="process" className="scroll-mt-44 bg-[#f7efe3] px-6 py-12 text-[#1d1a16]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
@@ -533,7 +567,6 @@ ${formData.get("extraMessage")}
       </section>
 
       {/* PORTFOLIO */}
-            {/* PORTFOLIO */}
       <section id="portfolio" className="scroll-mt-44 bg-[#fffaf0] px-6 py-12 text-[#1d1a16]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
@@ -659,7 +692,6 @@ ${formData.get("extraMessage")}
       </section>
 
       {/* CLIENT FORM */}
-            {/* CLIENT FORM */}
       <section
         id="client-form"
         className="scroll-mt-44 bg-[#1d1a16] px-6 py-12 text-[#fffaf0]"
@@ -899,9 +931,8 @@ ${formData.get("extraMessage")}
           </div>
         </div>
       </section>
-              
-      
-            {/* CTA */}
+
+      {/* CTA */}
       <section className="bg-[#f7efe3] px-6 py-16">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#1d1a16] shadow-2xl shadow-[#1d1a16]/20">
           <div className="grid gap-8 p-8 text-[#fffaf0] md:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -948,8 +979,8 @@ ${formData.get("extraMessage")}
           </div>
         </div>
       </section>
-      
-            {/* FOOTER */}
+
+      {/* FOOTER */}
       <footer className="border-t border-[#1d1a16]/10 bg-[#fffaf0] px-6 py-12 text-[#1d1a16]">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:items-start">
           <div>
