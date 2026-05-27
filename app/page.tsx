@@ -3,6 +3,25 @@
 export default function Home() {
   const whatsappNumber = "255689824682";
 
+  const createPackageWhatsAppLink = (
+  packageName: string,
+  price: string,
+  features: string[]
+) => {
+  const message = `
+Hello, I am interested in the ${packageName} package - ${price}.
+
+I understand this package includes:
+${features.map((feature) => `- ${feature}`).join("\n")}
+
+Extra pages, advanced features, domain, hosting, logo design, paid tools, and special integrations may be charged separately.
+
+Please confirm if this package is suitable for my business website.
+`;
+
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+};
+
   const createPackageWhatsAppLink = (packageName: string, price: string) => {
   const message = `Hello, I am interested in the ${packageName} package - ${price}. I would like to discuss my website.`;
 
@@ -455,17 +474,17 @@ ${formData.get("extraMessage")}
                   </ul>
 
                  <a
-  href={createPackageWhatsAppLink(pkg.name, pkg.price)}
-  target="_blank"
-  rel="noopener noreferrer"
-  className={`mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-center font-black transition hover:-translate-y-1 ${
-    index === 1
-      ? "bg-[#1d1a16] text-[#fffaf0] hover:bg-[#b45309]"
-      : "border border-white/15 bg-white/10 text-[#fffaf0] hover:border-[#f7d58b] hover:bg-[#f7d58b] hover:text-[#1d1a16]"
-  }`}
->
-  {pkg.button}
-</a>
+                      href={createPackageWhatsAppLink(pkg.name, pkg.price, pkg.features)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-center font-black transition hover:-translate-y-1 ${
+                      index === 1
+                      ? "bg-[#1d1a16] text-[#fffaf0] hover:bg-[#b45309]"
+                      : "border border-white/15 bg-white/10 text-[#fffaf0] hover:border-[#f7d58b] hover:bg-[#f7d58b] hover:text-[#1d1a16]"
+                }`}
+                >
+                      {pkg.button}
+                </a>
                 </div>
               </div>
             ))}
