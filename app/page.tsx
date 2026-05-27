@@ -76,7 +76,7 @@ ${formData.get("extraMessage")}`;
                 WebCraft <span className="text-[#f7d58b]">TZ</span>
               </p>
               <p className="text-xs font-black uppercase tracking-[0.3em] text-[#f7d58b]">
-                Website Creation Studio
+                Web Design & Development Studio
               </p>
             </a>
 
@@ -1030,7 +1030,7 @@ ${formData.get("extraMessage")}`;
             </p>
 
             <p className="mt-2 text-sm font-black uppercase tracking-[0.28em] text-[#b45309]">
-              Website Creation Studio
+              Web Design & Development Studio
             </p>
 
             <p className="mt-5 max-w-md leading-7 text-[#5f5549]">
