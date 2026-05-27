@@ -4,29 +4,23 @@ export default function Home() {
   const whatsappNumber = "255689824682";
 
   const createPackageWhatsAppLink = (
-  packageName: string,
-  price: string,
-  features: string[]
-) => {
-  const message = `
-Hello, I am interested in the ${packageName} package - ${price}.
+    packageName: string,
+    price: string,
+    features: string[]
+  ) => {
+    const featuresText = features.map((feature) => `- ${feature}`).join("\n");
+
+    const message = `Hello, I am interested in the ${packageName} package - ${price}.
 
 I understand this package includes:
-${features.map((feature) => `- ${feature}`).join("\n")}
+${featuresText}
 
 Extra pages, advanced features, domain, hosting, logo design, paid tools, and special integrations may be charged separately.
 
-Please confirm if this package is suitable for my business website.
-`;
+Please confirm if this package is suitable for my business website.`;
 
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
-
-  const createPackageWhatsAppLink = (packageName: string, price: string) => {
-  const message = `Hello, I am interested in the ${packageName} package - ${price}. I would like to discuss my website.`;
-
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-};
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,8 +28,7 @@ Please confirm if this package is suitable for my business website.
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    const message = `
-Hello, I want a website. Here are my business details:
+    const message = `Hello, I want a website. Here are my business details:
 
 Client Name: ${formData.get("clientName")}
 Business Name: ${formData.get("businessName")}
@@ -55,8 +48,7 @@ Competitor/Example Websites:
 ${formData.get("examples")}
 
 Extra Message:
-${formData.get("extraMessage")}
-`;
+${formData.get("extraMessage")}`;
 
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
