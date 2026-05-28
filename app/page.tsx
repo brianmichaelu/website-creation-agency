@@ -627,7 +627,7 @@ ${formData.get("extraMessage")}`;
                   "A professional business website designed to present printing services, branded products, company information and direct client enquiries.",
                 tag: "Live Business Site",
                 status: "Business Website",
-                url: "https://lubrun-website-ozvi.vercel.app/#home",
+                url: "https://lubrun-website.vercel.app/",
                 image: "/images/lubrun-preview.png",
               },
               {
