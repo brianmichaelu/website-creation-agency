@@ -648,7 +648,7 @@ ${formData.get("extraMessage")}`;
                 tag: "Travel Website",
                 status: "Booking Demo",
                 url: "https://vistaway-travel-website.vercel.app/#home",
-                image: "/images/airline-preview.png",
+                image: "/images/vistaway-preview.png",
               },
               {
                 name: "Website Creation Agency",
