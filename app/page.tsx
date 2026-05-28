@@ -641,13 +641,13 @@ ${formData.get("extraMessage")}`;
                 image: "/images/hotel-preview.png",
               },
               {
-                name: "Airline & Travel Booking Website",
+                name: "VistaWay Travel & Tours",
                 type: "Travel & Flight Booking Website",
                 description:
                   "A travel-style website demo with flight request sections, booking flow, service presentation and enquiry-focused layout.",
                 tag: "Travel Website",
                 status: "Booking Demo",
-                url: "https://airline-website-orcin.vercel.app/",
+                url: "https://vistaway-travel-website.vercel.app/#home",
                 image: "/images/airline-preview.png",
               },
               {
