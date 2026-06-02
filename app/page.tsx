@@ -651,14 +651,14 @@ ${formData.get("extraMessage")}`;
                 image: "/images/vistaway-preview.png",
               },
               {
-                name: "Website Creation Agency",
-                type: "Web Design Portfolio",
+                name: "HopeBridge Foundation",
+                type: "NGO & Donation Website",
                 description:
-                  "A modern agency website built to showcase services, packages, process, portfolio work and client onboarding through WhatsApp.",
-                tag: "Current Project",
-                status: "Agency Website",
-                url: "https://website-creation-agency-sepia.vercel.app/",
-                image: "/images/agency-preview.png",
+                  "A modern NGO website designed to present community programs, donation support, volunteer involvement, impact sections and direct enquiries.",
+                tag: "NGO Website",
+                status: "Donation Demo",
+                url: "https://hopebridge-foundation.vercel.app/",
+                image: "/images/hopebridge-preview.png",
               },
             ].map((project) => (
               <div
